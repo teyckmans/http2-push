@@ -78,7 +78,7 @@ public class SlicePage implements Page
 
         tableBuffer.append("<table cellpadding=\"0\" border=\"0\" cellspacing=\"2\">");
 
-        for(int rowIndex = 0; rowIndex <= 19; rowIndex++) {
+        for(int rowIndex = 0; rowIndex <= rows; rowIndex++) {
             tableBuffer.append(generateSliceRow(rowIndex));
         }
 
@@ -93,7 +93,7 @@ public class SlicePage implements Page
 
         rowBuffer.append("<tr>");
 
-        for(int columnIndex = 0; columnIndex <= 19; columnIndex++) {
+        for(int columnIndex = 0; columnIndex <= columns; columnIndex++) {
             final String imagePath = "images/slice_" + rowIndex + "_" + columnIndex + ".jpg";
 
             referencedResources.add(imagePath);
