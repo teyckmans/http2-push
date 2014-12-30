@@ -1,0 +1,6 @@
+rootProject.name = 'blog-http2-push'
+
+include 'blog-http2-core'
+include 'blog-http2-push'
+include 'blog-http2-no-push'
+
