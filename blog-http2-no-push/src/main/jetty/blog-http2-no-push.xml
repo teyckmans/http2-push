@@ -3,5 +3,5 @@
  
 <Configure class="org.eclipse.jetty.webapp.WebAppContext">
   <Set name="contextPath">/blog-http2-no-push</Set>
-  <Set name="war">${buildDir}\\libs\\${projectName}-${projectVersion}.war</Set>
+  <Set name="war">./webapps/${projectName}.war</Set>
 </Configure>
