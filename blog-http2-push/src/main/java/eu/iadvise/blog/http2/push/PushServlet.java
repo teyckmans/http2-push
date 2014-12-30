@@ -1,9 +1,7 @@
 package eu.iadvise.blog.http2.push;
 
-import org.eclipse.jetty.server.Dispatcher;
 import org.eclipse.jetty.server.Request;
 
-import javax.servlet.RequestDispatcher;
 import javax.servlet.annotation.WebServlet;
 
 /**
@@ -33,24 +31,29 @@ public class PushServlet extends AbstractHttpServlet
     }
 
     /**
-     * Retrieves the {@link javax.servlet.RequestDispatcher} for the resource path that needs to be pushed.
+     * Casts the current {@link javax.servlet.http.HttpServletRequest} to a {@link org.eclipse.jetty.server.Request}.
      *
-     * Casts the request dispatcher to a {@link org.eclipse.jetty.server.Dispatcher} so we can use the experimental
-     * push api.
+     * Uses the Jetty request to get a {@link org.eclipse.jetty.server.PushBuilder} to execute the HTTP/2 push.
      *
-     * Calls push on the {@link org.eclipse.jetty.server.Dispatcher} of the resource that needs to be pushed for the
-     * request the resource needs to be pushed for.
-     *
-     * @param resourceToPush path of the resource to push
+     * @param relativeResourcePath relative path of the resource to push
      */
-    private void pushResource(String resourceToPush)
+    private void pushResource(String relativeResourcePath)
     {
-        final RequestDispatcher requestDispatcher = getRequest()
-            .getServletContext()
-            .getRequestDispatcher("/blog-http2-push/" + resourceToPush);
+        final Request jettyRequest = (Request) getRequest();
 
-        final Dispatcher jettyDispatcher = (Dispatcher) requestDispatcher;
+        jettyRequest
+            .getPushBuilder()
+            .push(absoluteResourcePath(relativeResourcePath));
+    }
 
-        jettyDispatcher.push(getRequest());
+    /**
+     * Prepends the context root to the resource path.
+     *
+     * @param relativeResourcePath relative resource path
+     * @return absolute resource path
+     */
+    private String absoluteResourcePath(String relativeResourcePath)
+    {
+        return "/blog-http2-push/" + relativeResourcePath;
     }
 }
