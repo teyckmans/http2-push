@@ -5,19 +5,17 @@ execute mvn clean install using maven 3
 
 extract the distribution from org.eclipse.jetty.project\jetty-distribution\target\jetty-distribution-9.3.0-SNAPSHOT.zip
 
+>cd C:\tools\jetty\jetty-distribution-9.3.0-SNAPSHOT_2
 
+>mkdir blog-http2-no-push
 
-C:\tools\jetty\jetty-distribution-9.3.0-SNAPSHOT\blog-http2-no-push>cd C:\tools\jetty\jetty-distribution-9.3.0-SNAPSHOT_2
+>cd blog-http2-no-push
 
-C:\tools\jetty\jetty-distribution-9.3.0-SNAPSHOT_2>mkdir blog-http2-no-push
+>set JETTY_HOME=C:\tools\jetty\jetty-distribution-9.3.0-SNAPSHOT_2
 
-C:\tools\jetty\jetty-distribution-9.3.0-SNAPSHOT_2>cd blog-http2-no-push
+>set JETTY_BASE=C:\tools\jetty\jetty-distribution-9.3.0-SNAPSHOT_2\blog-http2-no-push
 
-C:\tools\jetty\jetty-distribution-9.3.0-SNAPSHOT_2\blog-http2-no-push>set JETTY_HOME=C:\tools\jetty\jetty-distribution-9.3.0-SNAPSHOT_2
-
-C:\tools\jetty\jetty-distribution-9.3.0-SNAPSHOT_2\blog-http2-no-push>set JETTY_BASE=C:\tools\jetty\jetty-distribution-9.3.0-SNAPSHOT_2\blog-http2-no-push
-
-C:\tools\jetty\jetty-distribution-9.3.0-SNAPSHOT_2\blog-http2-no-push>java -jar %JETTY_HOME%\start.jar --add-to-start=annotations,http,deploy
+>java -jar %JETTY_HOME%\start.jar --add-to-start=annotations,http,deploy
 INFO: server          initialised (transitively) in ${jetty.base}\start.ini
 INFO: http            initialised in ${jetty.base}\start.ini
 INFO: jndi            initialised (transitively) in ${jetty.base}\start.ini
@@ -30,10 +28,10 @@ INFO: annotations     initialised in ${jetty.base}\start.ini
 MKDIR: ${jetty.base}\webapps
 INFO: Base directory was modified
 
-C:\tools\jetty\jetty-distribution-9.3.0-SNAPSHOT_2\blog-http2-no-push>copy C:\dev\blog-http2-push\blog-http2-no-push\build\libs\blog-http2-no-push.xml .\webapps
+>copy C:\dev\blog-http2-push\blog-http2-no-push\build\libs\blog-http2-no-push.xml .\webapps
         1 file(s) copied.
 
-C:\tools\jetty\jetty-distribution-9.3.0-SNAPSHOT_2\blog-http2-no-push>java -jar %JETTY_HOME%\start.jar
+>java -jar %JETTY_HOME%\start.jar
 2014-12-30 21:42:38.122:INFO::main: Logging initialized @568ms
 2014-12-30 21:42:38.293:INFO:oejs.Server:main: jetty-9.3.0-SNAPSHOT
 2014-12-30 21:42:38.310:INFO:oejdp.ScanningAppProvider:main: Deployment monitor [file:///C:/tools/jetty/jetty-distribution-9.3.0-SNAPSHOT_2/blog-http2-no-push/webapps/] at interval 1

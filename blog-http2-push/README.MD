@@ -4,17 +4,17 @@ execute mvn clean install using maven 3
 
 extract the distribution from org.eclipse.jetty.project\jetty-distribution\target\jetty-distribution-9.3.0-SNAPSHOT.zip
 
-C:\tools\jetty\jetty-distribution-9.3.0-SNAPSHOT\http2-demo>cd C:\tools\jetty\jetty-distribution-9.3.0-SNAPSHOT_2
+>cd C:\tools\jetty\jetty-distribution-9.3.0-SNAPSHOT_2
 
-C:\tools\jetty\jetty-distribution-9.3.0-SNAPSHOT_2>mkdir blog-http2-push
+>mkdir blog-http2-push
 
-C:\tools\jetty\jetty-distribution-9.3.0-SNAPSHOT_2>set JETTY_HOME=C:\tools\jetty\jetty-distribution-9.3.0-SNAPSHOT_2
+>set JETTY_HOME=C:\tools\jetty\jetty-distribution-9.3.0-SNAPSHOT_2
 
-C:\tools\jetty\jetty-distribution-9.3.0-SNAPSHOT_2>cd blog-http2-push
+>cd blog-http2-push
 
-C:\tools\jetty\jetty-distribution-9.3.0-SNAPSHOT_2\blog-http2-push>set JETTY_BASE=C:\tools\jetty\jetty-distribution-9.3.0-SNAPSHOT_2
+>set JETTY_BASE=C:\tools\jetty\jetty-distribution-9.3.0-SNAPSHOT_2\blog-http2-push
 
-C:\tools\jetty\jetty-distribution-9.3.0-SNAPSHOT_2\blog-http2-push>java -jar %JETTY_HOME%\start.jar --add-to-start=annotations,http2,deploy
+>java -jar %JETTY_HOME%\start.jar --add-to-start=annotations,http2,deploy
 
 ALERT: There are enabled module(s) with licenses.
 The following 1 module(s):
@@ -47,19 +47,19 @@ DOWNLOAD: http://git.eclipse.org/c/jetty/org.eclipse.jetty.project.git/plain/jet
 MKDIR: ${jetty.base}\webapps
 INFO: Base directory was modified
 
-C:\tools\jetty\jetty-distribution-9.3.0-SNAPSHOT_2\blog-http2-push>cp C:\dev\blog-http2-push\blog-http2-push\src\main\jetty\blog-http2-push.xml .\webapps
+>cp C:\dev\blog-http2-push\blog-http2-push\src\main\jetty\blog-http2-push.xml .\webapps
 'cp' is not recognized as an internal or external command,
 operable program or batch file.
 
-C:\tools\jetty\jetty-distribution-9.3.0-SNAPSHOT_2\blog-http2-push>copy C:/dev/blog-http2-push/blog-http2-push/build/libs/blog-http2-push.xml .\webapps
+>copy C:/dev/blog-http2-push/blog-http2-push/build/libs/blog-http2-push.xml .\webapps
 C:
 The system cannot find the file specified.
         0 file(s) copied.
 
-C:\tools\jetty\jetty-distribution-9.3.0-SNAPSHOT_2\blog-http2-push>copy C:\dev\blog-http2-push\blog-http2-push\build\libs\blog-http2-push.xml .\webapps
+>copy C:\dev\blog-http2-push\blog-http2-push\build\libs\blog-http2-push.xml .\webapps
         1 file(s) copied.
 
-C:\tools\jetty\jetty-distribution-9.3.0-SNAPSHOT_2\blog-http2-push>java -jar %JETTY_HOME%\start.jar
+>java -jar %JETTY_HOME%\start.jar
 2014-12-30 21:19:57.091:INFO::main: Logging initialized @131ms
 2014-12-30 21:19:57.305:INFO:oejs.Server:main: jetty-9.3.0-SNAPSHOT
 2014-12-30 21:19:57.324:INFO:oejdp.ScanningAppProvider:main: Deployment monitor [file:///C:/tools/jetty/jetty-distribution-9.3.0-SNAPSHOT_2/blog-http2-push/webapps/] at interval 1
