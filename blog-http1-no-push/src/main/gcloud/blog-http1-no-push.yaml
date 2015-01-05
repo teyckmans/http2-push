@@ -1,0 +1,8 @@
+version: 1.0
+containers:
+  - name: blog-http1-no-push
+    image: teyckmans/blog-http1-no-push
+    ports:
+      - name: jetty-http1
+        hostPort: 8080
+        containerPort: 8080

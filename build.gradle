@@ -31,19 +31,24 @@ project(':blog-http2-push') {
     }
 
     task('jetty-config', type: Copy) {
-        from 'src/main/jetty/blog-http2-push.xml'
+        from "src/main/jetty/${project.name}.xml"
         into 'build/libs'
         expand (
-                'buildDir': buildDir.absolutePath,
                 'projectName': project.name,
                 'projectVersion': project.version
         )
     }
 
+    task('docker-config', type: Copy) {
+        from 'src/main/docker'
+        into 'build/libs'
+    }
+
+    war.dependsOn('docker-config')
     war.dependsOn('jetty-config')
 }
 
-project(':blog-http2-no-push') {
+project(':blog-http1-no-push') {
     apply plugin: 'war'
 
     dependencies {
@@ -52,14 +57,19 @@ project(':blog-http2-no-push') {
     }
 
     task('jetty-config', type: Copy) {
-        from 'src/main/jetty/blog-http2-no-push.xml'
+        from "src/main/jetty/${project.name}.xml"
         into 'build/libs'
         expand (
-                'buildDir': buildDir.absolutePath,
                 'projectName': project.name,
                 'projectVersion': project.version
         )
     }
 
+    task('docker-config', type: Copy) {
+        from 'src/main/docker'
+        into 'build/libs'
+    }
+
+    war.dependsOn('docker-config')
     war.dependsOn('jetty-config')
 }

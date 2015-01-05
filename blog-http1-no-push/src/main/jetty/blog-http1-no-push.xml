@@ -2,6 +2,6 @@
 <!DOCTYPE Configure PUBLIC "-//Jetty//Configure//EN" "http://www.eclipse.org/jetty/configure_9_0.dtd">
  
 <Configure class="org.eclipse.jetty.webapp.WebAppContext">
-  <Set name="contextPath">/blog-http2-no-push</Set>
-  <Set name="war">./webapps/${projectName}.war</Set>
+  <Set name="contextPath">/${projectName}</Set>
+  <Set name="war"><Property name="jetty.base" default="." />/<Property name="jetty.deploy.monitoredDirName" default="webapps"/>/${projectName}.war</Set>
 </Configure>
