@@ -1,0 +1,635 @@
+2015-01-18 20:08:07.833:WARN:oejs.HttpChannel:qtp396180261-107: Commit failed
+java.lang.IllegalStateException: committed
+        at org.eclipse.jetty.http2.server.HttpTransportOverHTTP2.send(HttpTransportOverHTTP2.java:100)
+        at org.eclipse.jetty.server.HttpChannel.sendResponse(HttpChannel.java:591)
+        at org.eclipse.jetty.server.HttpChannel$CommitCallback.failed(HttpChannel.java:712)5076: SPDY_SESSION
+146.148.90.85:8443 (DIRECT)
+Start Time: 2015-01-18 21:56:56.578
+
+t=329414 [st=    0] +SPDY_SESSION  [dt=30300]
+                     --> host = "146.148.90.85:8443"
+                     --> proxy = "DIRECT"
+t=329414 [st=    0]    SPDY_SESSION_INITIALIZED
+                       --> protocol = "h2-14"
+                       --> source_dependency = 5073 (SOCKET)
+t=329414 [st=    0]    SPDY_SESSION_SEND_SETTINGS
+                       --> settings = ["[id:3 flags:0 value:1000]","[id:4 flags:0 value:10485760]"]
+t=329414 [st=    0]    SPDY_STREAM_UPDATE_RECV_WINDOW
+                       --> delta = 10420225
+                       --> window_size = 10485760
+t=329414 [st=    0]    SPDY_SESSION_SENT_WINDOW_UPDATE_FRAME
+                       --> delta = 10420225
+                       --> stream_id = 0
+t=329415 [st=    1]    SPDY_SESSION_SYN_STREAM
+                       --> fin = true
+                       --> :authority: 146.148.90.85:8443
+                           :method: GET
+                           :path: /blog-http2-push/push?push=true&rows=1&columns=1
+                           :scheme: https
+                           accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+                           accept-encoding: gzip, deflate, sdch
+                           accept-language: nl-NL,nl;q=0.8,en-US;q=0.6,en;q=0.4
+                           cookie: [35 bytes were stripped]
+                           user-agent: Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2279.2 Safari/537.36
+                       --> spdy_priority = 0
+                       --> stream_id = 1
+                       --> unidirectional = false
+t=329562 [st=  148]    SPDY_SESSION_RECV_SETTINGS
+                       --> clear_persisted = false
+                       --> host = "146.148.90.85:8443"
+t=329562 [st=  148]    SPDY_SESSION_RECV_SETTING
+                       --> flags = 0
+                       --> id = 1
+                       --> value = 4096
+t=329562 [st=  148]    SPDY_SESSION_RECV_SETTING
+                       --> flags = 0
+                       --> id = 3
+                       --> value = 1024
+t=329562 [st=  148]    SPDY_SESSION_UPDATE_STREAMS_SEND_WINDOW_SIZE
+                       --> delta_window_size = 0
+t=329562 [st=  148]    SPDY_SESSION_RECV_SETTING
+                       --> flags = 0
+                       --> id = 4
+                       --> value = 65535
+t=329564 [st=  150]    SPDY_SESSION_RECV_PUSH_PROMISE
+                       --> :authority: 146.148.90.85:8443
+                           :method: GET
+                           :path: /blog-http2-push/images/slice_0_0.jpg
+                           :scheme: https
+                           accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+                           accept-encoding: gzip, deflate, sdch
+                           accept-language: nl-NL,nl;q=0.8,en-US;q=0.6,en;q=0.4
+                           referer: https://146.148.90.85:8443/blog-http2-push/push
+                           user-agent: Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2279.2 Safari/537.36
+                       --> id = 1
+                       --> promised_stream_id = 2
+t=329564 [st=  150]    SPDY_SESSION_RECV_PUSH_PROMISE
+                       --> :authority: 146.148.90.85:8443
+                           :method: GET
+                           :path: /blog-http2-push/images/slice_0_1.jpg
+                           :scheme: https
+                           accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+                           accept-encoding: gzip, deflate, sdch
+                           accept-language: nl-NL,nl;q=0.8,en-US;q=0.6,en;q=0.4
+                           referer: https://146.148.90.85:8443/blog-http2-push/push
+                           user-agent: Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2279.2 Safari/537.36
+                       --> id = 1
+                       --> promised_stream_id = 4
+t=329565 [st=  151]    SPDY_SESSION_RECV_PUSH_PROMISE
+                       --> :authority: 146.148.90.85:8443
+                           :method: GET
+                           :path: /blog-http2-push/images/slice_1_0.jpg
+                           :scheme: https
+                           accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+                           accept-encoding: gzip, deflate, sdch
+                           accept-language: nl-NL,nl;q=0.8,en-US;q=0.6,en;q=0.4
+                           referer: https://146.148.90.85:8443/blog-http2-push/push
+                           user-agent: Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2279.2 Safari/537.36
+                       --> id = 1
+                       --> promised_stream_id = 6
+t=329566 [st=  152]    SPDY_SESSION_RECV_PUSH_PROMISE
+                       --> :authority: 146.148.90.85:8443
+                           :method: GET
+                           :path: /blog-http2-push/images/slice_1_1.jpg
+                           :scheme: https
+                           accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+                           accept-encoding: gzip, deflate, sdch
+                           accept-language: nl-NL,nl;q=0.8,en-US;q=0.6,en;q=0.4
+                           referer: https://146.148.90.85:8443/blog-http2-push/push
+                           user-agent: Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2279.2 Safari/537.36
+                       --> id = 1
+                       --> promised_stream_id = 8
+t=329715 [st=  301]    SPDY_SESSION_RECV_HEADERS
+                       --> fin = false
+                       --> :status: 200
+                           accept-ranges: bytes
+                           content-length: 4326
+                           content-type: image/jpeg
+                           last-modified: Thu, 01 Jan 2015 20:36:08 GMT
+                       --> stream_id = 2
+t=329715 [st=  301]    SPDY_SESSION_RECV_DATA
+                       --> fin = false
+                       --> size = 4326
+                       --> stream_id = 2
+t=329715 [st=  301]    SPDY_SESSION_UPDATE_RECV_WINDOW
+                       --> delta = -4326
+                       --> window_size = 10481434
+t=329715 [st=  301]    SPDY_SESSION_RECV_DATA
+                       --> fin = true
+                       --> size = 0
+                       --> stream_id = 2
+t=329715 [st=  301]    SPDY_SESSION_RECV_HEADERS
+                       --> fin = false
+                       --> :status: 200
+                           accept-ranges: bytes
+                           content-length: 4322
+                           content-type: image/jpeg
+                           last-modified: Thu, 01 Jan 2015 20:36:08 GMT
+                       --> stream_id = 4
+t=329715 [st=  301]    SPDY_SESSION_RECV_DATA
+                       --> fin = false
+                       --> size = 3748
+                       --> stream_id = 4
+t=329715 [st=  301]    SPDY_SESSION_UPDATE_RECV_WINDOW
+                       --> delta = -3748
+                       --> window_size = 10477686
+t=329715 [st=  301]    SPDY_SESSION_RECV_DATA
+                       --> fin = false
+                       --> size = 574
+                       --> stream_id = 4
+t=329716 [st=  302]    SPDY_SESSION_UPDATE_RECV_WINDOW
+                       --> delta = -574
+                       --> window_size = 10477112
+t=329716 [st=  302]    SPDY_SESSION_RECV_DATA
+                       --> fin = true
+                       --> size = 0
+                       --> stream_id = 4
+t=329716 [st=  302]    SPDY_SESSION_RECV_HEADERS
+                       --> fin = false
+                       --> :status: 200
+                           accept-ranges: bytes
+                           content-length: 4321
+                           content-type: image/jpeg
+                           last-modified: Thu, 01 Jan 2015 20:36:08 GMT
+                       --> stream_id = 6
+t=329716 [st=  302]    SPDY_SESSION_RECV_DATA
+                       --> fin = false
+                       --> size = 4321
+                       --> stream_id = 6
+t=329716 [st=  302]    SPDY_SESSION_UPDATE_RECV_WINDOW
+                       --> delta = -4321
+                       --> window_size = 10472791
+t=329716 [st=  302]    SPDY_SESSION_RECV_DATA
+                       --> fin = true
+                       --> size = 0
+                       --> stream_id = 6
+t=329767 [st=  353]    SPDY_SESSION_RECV_HEADERS
+                       --> fin = false
+                       --> :status: 200
+                           accept-ranges: bytes
+                           content-length: 4323
+                           content-type: image/jpeg
+                           last-modified: Thu, 01 Jan 2015 20:36:08 GMT
+                       --> stream_id = 8
+t=329767 [st=  353]    SPDY_SESSION_RECV_DATA
+                       --> fin = false
+                       --> size = 4323
+                       --> stream_id = 8
+t=329767 [st=  353]    SPDY_SESSION_UPDATE_RECV_WINDOW
+                       --> delta = -4323
+                       --> window_size = 10468468
+t=329767 [st=  353]    SPDY_SESSION_RECV_DATA
+                       --> fin = true
+                       --> size = 0
+                       --> stream_id = 8
+t=329767 [st=  353]    SPDY_SESSION_RECV_HEADERS
+                       --> fin = false
+                       --> :status: 200
+                           content-type: text/html;charset=utf-8
+                           server: Jetty(9.3.0-SNAPSHOT)
+                       --> stream_id = 1
+t=329767 [st=  353]    SPDY_SESSION_RECV_DATA
+                       --> fin = false
+                       --> size = 518
+                       --> stream_id = 1
+t=329767 [st=  353]    SPDY_SESSION_UPDATE_RECV_WINDOW
+                       --> delta = -518
+                       --> window_size = 10467950
+t=329767 [st=  353]    SPDY_SESSION_RECV_DATA
+                       --> fin = true
+                       --> size = 0
+                       --> stream_id = 1
+t=329767 [st=  353]    SPDY_STREAM_UPDATE_RECV_WINDOW
+                       --> delta = 518
+                       --> window_size = 10468468
+t=359713 [st=30299]    SPDY_SESSION_GOAWAY
+                       --> active_streams = 4
+                       --> last_accepted_stream_id = 1
+                       --> status = 0
+                       --> unclaimed_streams = 4
+t=359713 [st=30299]    SPDY_STREAM_ERROR
+                       --> description = "ABANDONED (stream_id=2): https://146.148.90.85:8443/blog-http2-push/images/slice_0_0.jpg"
+                       --> status = -3
+                       --> stream_id = 2
+t=359713 [st=30299]    SPDY_STREAM_UPDATE_RECV_WINDOW
+                       --> delta = 4326
+                       --> window_size = 10472794
+t=359713 [st=30299]    SPDY_STREAM_ERROR
+                       --> description = "ABANDONED (stream_id=4): https://146.148.90.85:8443/blog-http2-push/images/slice_0_1.jpg"
+                       --> status = -3
+                       --> stream_id = 4
+t=359713 [st=30299]    SPDY_STREAM_UPDATE_RECV_WINDOW
+                       --> delta = 3748
+                       --> window_size = 10476542
+t=359713 [st=30299]    SPDY_STREAM_UPDATE_RECV_WINDOW
+                       --> delta = 574
+                       --> window_size = 10477116
+t=359713 [st=30299]    SPDY_STREAM_ERROR
+                       --> description = "ABANDONED (stream_id=6): https://146.148.90.85:8443/blog-http2-push/images/slice_1_0.jpg"
+                       --> status = -3
+                       --> stream_id = 6
+t=359713 [st=30299]    SPDY_STREAM_UPDATE_RECV_WINDOW
+                       --> delta = 4321
+                       --> window_size = 10481437
+t=359713 [st=30299]    SPDY_STREAM_ERROR
+                       --> description = "ABANDONED (stream_id=8): https://146.148.90.85:8443/blog-http2-push/images/slice_1_1.jpg"
+                       --> status = -3
+                       --> stream_id = 8
+t=359713 [st=30299]    SPDY_STREAM_UPDATE_RECV_WINDOW
+                       --> delta = 4323
+                       --> window_size = 10485760
+t=359713 [st=30299]    SPDY_SESSION_CLOSE
+                       --> description = "Finished going away"
+                       --> net_error = 0 (?)
+t=359713 [st=30299]    SPDY_SESSION_POOL_REMOVE_SESSION
+                       --> source_dependency = 5076 (SPDY_SESSION)
+t=359714 [st=30300] -SPDY_SESSION
+        at org.eclipse.jetty.http2.server.HttpTransportOverHTTP2.send(HttpTransportOverHTTP2.java:100)
+        at org.eclipse.jetty.server.HttpChannel.sendResponse(HttpChannel.java:591)
+        at org.eclipse.jetty.server.HttpChannel$CommitCallback.failed(HttpChannel.java:712)
+        at org.eclipse.jetty.http2.server.HttpTransportOverHTTP2.send(HttpTransportOverHTTP2.java:100)
+        at org.eclipse.jetty.server.HttpChannel.sendResponse(HttpChannel.java:591)
+        at org.eclipse.jetty.server.HttpChannel$CommitCallback.failed(HttpChannel.java:712)
+        at org.eclipse.jetty.http2.server.HttpTransportOverHTTP2.send(HttpTransportOverHTTP2.java:100)
+        at org.eclipse.jetty.server.HttpChannel.sendResponse(HttpChannel.java:591)
+        at org.eclipse.jetty.server.HttpChannel$CommitCallback.failed(HttpChannel.java:712)
+        at org.eclipse.jetty.http2.server.HttpTransportOverHTTP2.send(HttpTransportOverHTTP2.java:100)
+        at org.eclipse.jetty.server.HttpChannel.sendResponse(HttpChannel.java:591)
+        at org.eclipse.jetty.server.HttpChannel$CommitCallback.failed(HttpChannel.java:712)
+        at org.eclipse.jetty.http2.server.HttpTransportOverHTTP2.send(HttpTransportOverHTTP2.java:100)
+        at org.eclipse.jetty.server.HttpChannel.sendResponse(HttpChannel.java:591)
+        at org.eclipse.jetty.server.HttpChannel$CommitCallback.failed(HttpChannel.java:712)
+        at org.eclipse.jetty.http2.server.HttpTransportOverHTTP2.send(HttpTransportOverHTTP2.java:100)
+        at org.eclipse.jetty.server.HttpChannel.sendResponse(HttpChannel.java:591)
+        at org.eclipse.jetty.server.HttpChannel$CommitCallback.failed(HttpChannel.java:712)
+        at org.eclipse.jetty.http2.server.HttpTransportOverHTTP2.send(HttpTransportOverHTTP2.java:100)
+        at org.eclipse.jetty.server.HttpChannel.sendResponse(HttpChannel.java:591)
+        at org.eclipse.jetty.server.HttpChannel$CommitCallback.failed(HttpChannel.java:712)
+        at org.eclipse.jetty.http2.server.HttpTransportOverHTTP2.send(HttpTransportOverHTTP2.java:100)
+        at org.eclipse.jetty.server.HttpChannel.sendResponse(HttpChannel.java:591)
+        at org.eclipse.jetty.server.HttpChannel$CommitCallback.failed(HttpChannel.java:712)
+        at org.eclipse.jetty.http2.server.HttpTransportOverHTTP2.send(HttpTransportOverHTTP2.java:100)
+        at org.eclipse.jetty.server.HttpChannel.sendResponse(HttpChannel.java:591)
+        at org.eclipse.jetty.server.HttpChannel$CommitCallback.failed(HttpChannel.java:712)
+        at org.eclipse.jetty.http2.server.HttpTransportOverHTTP2.send(HttpTransportOverHTTP2.java:100)
+        at org.eclipse.jetty.server.HttpChannel.sendResponse(HttpChannel.java:591)
+        at org.eclipse.jetty.server.HttpChannel$CommitCallback.failed(HttpChannel.java:712)
+        at org.eclipse.jetty.http2.server.HttpTransportOverHTTP2.send(HttpTransportOverHTTP2.java:100)
+        at org.eclipse.jetty.server.HttpChannel.sendResponse(HttpChannel.java:591)
+        at org.eclipse.jetty.server.HttpChannel$CommitCallback.failed(HttpChannel.java:712)
+        at org.eclipse.jetty.http2.server.HttpTransportOverHTTP2.send(HttpTransportOverHTTP2.java:100)
+        at org.eclipse.jetty.server.HttpChannel.sendResponse(HttpChannel.java:591)
+        at org.eclipse.jetty.server.HttpChannel$CommitCallback.failed(HttpChannel.java:712)
+        at org.eclipse.jetty.http2.server.HttpTransportOverHTTP2.send(HttpTransportOverHTTP2.java:100)
+        at org.eclipse.jetty.server.HttpChannel.sendResponse(HttpChannel.java:591)
+        at org.eclipse.jetty.server.HttpChannel$CommitCallback.failed(HttpChannel.java:712)
+        at org.eclipse.jetty.http2.server.HttpTransportOverHTTP2.send(HttpTransportOverHTTP2.java:100)
+        at org.eclipse.jetty.server.HttpChannel.sendResponse(HttpChannel.java:591)
+        at org.eclipse.jetty.server.HttpChannel$CommitCallback.failed(HttpChannel.java:712)
+        at org.eclipse.jetty.http2.server.HttpTransportOverHTTP2.send(HttpTransportOverHTTP2.java:100)
+        at org.eclipse.jetty.server.HttpChannel.sendResponse(HttpChannel.java:591)
+        at org.eclipse.jetty.server.HttpChannel$CommitCallback.failed(HttpChannel.java:712)
+        at org.eclipse.jetty.http2.server.HttpTransportOverHTTP2.send(HttpTransportOverHTTP2.java:100)
+        at org.eclipse.jetty.server.HttpChannel.sendResponse(HttpChannel.java:591)
+        at org.eclipse.jetty.server.HttpChannel$CommitCallback.failed(HttpChannel.java:712)
+        at org.eclipse.jetty.http2.server.HttpTransportOverHTTP2.send(HttpTransportOverHTTP2.java:100)
+        at org.eclipse.jetty.server.HttpChannel.sendResponse(HttpChannel.java:591)
+        at org.eclipse.jetty.server.HttpChannel$CommitCallback.failed(HttpChannel.java:712)
+        at org.eclipse.jetty.http2.server.HttpTransportOverHTTP2.send(HttpTransportOverHTTP2.java:100)
+        at org.eclipse.jetty.server.HttpChannel.sendResponse(HttpChannel.java:591)
+        at org.eclipse.jetty.server.HttpChannel$CommitCallback.failed(HttpChannel.java:712)
+        at org.eclipse.jetty.http2.server.HttpTransportOverHTTP2.send(HttpTransportOverHTTP2.java:100)
+        at org.eclipse.jetty.server.HttpChannel.sendResponse(HttpChannel.java:591)
+        at org.eclipse.jetty.server.HttpChannel$CommitCallback.failed(HttpChannel.java:712)
+        at org.eclipse.jetty.http2.server.HttpTransportOverHTTP2.send(HttpTransportOverHTTP2.java:100)
+        at org.eclipse.jetty.server.HttpChannel.sendResponse(HttpChannel.java:591)
+        at org.eclipse.jetty.server.HttpChannel$CommitCallback.failed(HttpChannel.java:712)
+        at org.eclipse.jetty.http2.server.HttpTransportOverHTTP2.send(HttpTransportOverHTTP2.java:100)
+        at org.eclipse.jetty.server.HttpChannel.sendResponse(HttpChannel.java:591)
+        at org.eclipse.jetty.server.HttpChannel$CommitCallback.failed(HttpChannel.java:712)
+        at org.eclipse.jetty.http2.server.HttpTransportOverHTTP2.send(HttpTransportOverHTTP2.java:100)
+        at org.eclipse.jetty.server.HttpChannel.sendResponse(HttpChannel.java:591)
+        at org.eclipse.jetty.server.HttpChannel$CommitCallback.failed(HttpChannel.java:712)
+        at org.eclipse.jetty.http2.server.HttpTransportOverHTTP2.send(HttpTransportOverHTTP2.java:100)
+        at org.eclipse.jetty.server.HttpChannel.sendResponse(HttpChannel.java:591)
+        at org.eclipse.jetty.server.HttpChannel$CommitCallback.failed(HttpChannel.java:712)
+        at org.eclipse.jetty.http2.server.HttpTransportOverHTTP2.send(HttpTransportOverHTTP2.java:100)
+        at org.eclipse.jetty.server.HttpChannel.sendResponse(HttpChannel.java:591)
+        at org.eclipse.jetty.server.HttpChannel$CommitCallback.failed(HttpChannel.java:712)
+        at org.eclipse.jetty.http2.server.HttpTransportOverHTTP2.send(HttpTransportOverHTTP2.java:100)
+        at org.eclipse.jetty.server.HttpChannel.sendResponse(HttpChannel.java:591)
+        at org.eclipse.jetty.server.HttpChannel$CommitCallback.failed(HttpChannel.java:712)
+        at org.eclipse.jetty.http2.server.HttpTransportOverHTTP2.send(HttpTransportOverHTTP2.java:100)
+        at org.eclipse.jetty.server.HttpChannel.sendResponse(HttpChannel.java:591)
+        at org.eclipse.jetty.server.HttpChannel$CommitCallback.failed(HttpChannel.java:712)
+        at org.eclipse.jetty.http2.server.HttpTransportOverHTTP2.send(HttpTransportOverHTTP2.java:100)
+        at org.eclipse.jetty.server.HttpChannel.sendResponse(HttpChannel.java:591)
+        at org.eclipse.jetty.server.HttpChannel$CommitCallback.failed(HttpChannel.java:712)
+        at org.eclipse.jetty.http2.server.HttpTransportOverHTTP2.send(HttpTransportOverHTTP2.java:100)
+        at org.eclipse.jetty.server.HttpChannel.sendResponse(HttpChannel.java:591)
+        at org.eclipse.jetty.server.HttpChannel$CommitCallback.failed(HttpChannel.java:712)
+        at org.eclipse.jetty.http2.server.HttpTransportOverHTTP2.send(HttpTransportOverHTTP2.java:100)
+        at org.eclipse.jetty.server.HttpChannel.sendResponse(HttpChannel.java:591)
+        at org.eclipse.jetty.server.HttpChannel$CommitCallback.failed(HttpChannel.java:712)
+        at org.eclipse.jetty.http2.server.HttpTransportOverHTTP2.send(HttpTransportOverHTTP2.java:100)
+        at org.eclipse.jetty.server.HttpChannel.sendResponse(HttpChannel.java:591)
+        at org.eclipse.jetty.server.HttpChannel$CommitCallback.failed(HttpChannel.java:712)
+        at org.eclipse.jetty.http2.server.HttpTransportOverHTTP2.send(HttpTransportOverHTTP2.java:100)
+        at org.eclipse.jetty.server.HttpChannel.sendResponse(HttpChannel.java:591)
+        at org.eclipse.jetty.server.HttpChannel$CommitCallback.failed(HttpChannel.java:712)
+        at org.eclipse.jetty.http2.server.HttpTransportOverHTTP2.send(HttpTransportOverHTTP2.java:100)
+        at org.eclipse.jetty.server.HttpChannel.sendResponse(HttpChannel.java:591)
+        at org.eclipse.jetty.server.HttpChannel$CommitCallback.failed(HttpChannel.java:712)
+        at org.eclipse.jetty.http2.server.HttpTransportOverHTTP2.send(HttpTransportOverHTTP2.java:100)
+        at org.eclipse.jetty.server.HttpChannel.sendResponse(HttpChannel.java:591)
+        at org.eclipse.jetty.server.HttpChannel$CommitCallback.failed(HttpChannel.java:712)
+        at org.eclipse.jetty.http2.server.HttpTransportOverHTTP2.send(HttpTransportOverHTTP2.java:100)
+        at org.eclipse.jetty.server.HttpChannel.sendResponse(HttpChannel.java:591)
+        at org.eclipse.jetty.server.HttpChannel$CommitCallback.failed(HttpChannel.java:712)
+        at org.eclipse.jetty.http2.server.HttpTransportOverHTTP2.send(HttpTransportOverHTTP2.java:100)
+        at org.eclipse.jetty.server.HttpChannel.sendResponse(HttpChannel.java:591)
+        at org.eclipse.jetty.server.HttpChannel$CommitCallback.failed(HttpChannel.java:712)
+        at org.eclipse.jetty.http2.server.HttpTransportOverHTTP2.send(HttpTransportOverHTTP2.java:100)
+        at org.eclipse.jetty.server.HttpChannel.sendResponse(HttpChannel.java:591)
+        at org.eclipse.jetty.server.HttpChannel$CommitCallback.failed(HttpChannel.java:712)
+        at org.eclipse.jetty.http2.server.HttpTransportOverHTTP2.send(HttpTransportOverHTTP2.java:100)
+        at org.eclipse.jetty.server.HttpChannel.sendResponse(HttpChannel.java:591)
+        at org.eclipse.jetty.server.HttpChannel$CommitCallback.failed(HttpChannel.java:712)
+        at org.eclipse.jetty.http2.server.HttpTransportOverHTTP2.send(HttpTransportOverHTTP2.java:100)
+        at org.eclipse.jetty.server.HttpChannel.sendResponse(HttpChannel.java:591)
+        at org.eclipse.jetty.server.HttpChannel$CommitCallback.failed(HttpChannel.java:712)
+        at org.eclipse.jetty.http2.server.HttpTransportOverHTTP2.send(HttpTransportOverHTTP2.java:100)
+        at org.eclipse.jetty.server.HttpChannel.sendResponse(HttpChannel.java:591)
+        at org.eclipse.jetty.server.HttpChannel$CommitCallback.failed(HttpChannel.java:712)
+        at org.eclipse.jetty.http2.server.HttpTransportOverHTTP2.send(HttpTransportOverHTTP2.java:100)
+        at org.eclipse.jetty.server.HttpChannel.sendResponse(HttpChannel.java:591)
+        at org.eclipse.jetty.server.HttpChannel$CommitCallback.failed(HttpChannel.java:712)
+        at org.eclipse.jetty.http2.server.HttpTransportOverHTTP2.send(HttpTransportOverHTTP2.java:100)
+        at org.eclipse.jetty.server.HttpChannel.sendResponse(HttpChannel.java:591)
+        at org.eclipse.jetty.server.HttpChannel$CommitCallback.failed(HttpChannel.java:712)
+        at org.eclipse.jetty.http2.server.HttpTransportOverHTTP2.send(HttpTransportOverHTTP2.java:100)
+        at org.eclipse.jetty.server.HttpChannel.sendResponse(HttpChannel.java:591)
+        at org.eclipse.jetty.server.HttpChannel$CommitCallback.failed(HttpChannel.java:712)
+        at org.eclipse.jetty.http2.server.HttpTransportOverHTTP2.send(HttpTransportOverHTTP2.java:100)
+        at org.eclipse.jetty.server.HttpChannel.sendResponse(HttpChannel.java:591)
+        at org.eclipse.jetty.server.HttpChannel$CommitCallback.failed(HttpChannel.java:712)
+        at org.eclipse.jetty.http2.server.HttpTransportOverHTTP2.send(HttpTransportOverHTTP2.java:100)
+        at org.eclipse.jetty.server.HttpChannel.sendResponse(HttpChannel.java:591)
+        at org.eclipse.jetty.server.HttpChannel$CommitCallback.failed(HttpChannel.java:712)
+        at org.eclipse.jetty.http2.server.HttpTransportOverHTTP2.send(HttpTransportOverHTTP2.java:100)
+        at org.eclipse.jetty.server.HttpChannel.sendResponse(HttpChannel.java:591)
+        at org.eclipse.jetty.server.HttpChannel$CommitCallback.failed(HttpChannel.java:712)
+        at org.eclipse.jetty.http2.server.HttpTransportOverHTTP2.send(HttpTransportOverHTTP2.java:100)
+        at org.eclipse.jetty.server.HttpChannel.sendResponse(HttpChannel.java:591)
+        at org.eclipse.jetty.server.HttpChannel$CommitCallback.failed(HttpChannel.java:712)
+        at org.eclipse.jetty.http2.server.HttpTransportOverHTTP2.send(HttpTransportOverHTTP2.java:100)
+        at org.eclipse.jetty.server.HttpChannel.sendResponse(HttpChannel.java:591)
+        at org.eclipse.jetty.server.HttpChannel$CommitCallback.failed(HttpChannel.java:712)
+        at org.eclipse.jetty.http2.server.HttpTransportOverHTTP2.send(HttpTransportOverHTTP2.java:100)
+        at org.eclipse.jetty.server.HttpChannel.sendResponse(HttpChannel.java:591)
+        at org.eclipse.jetty.server.HttpChannel$CommitCallback.failed(HttpChannel.java:712)
+        at org.eclipse.jetty.http2.server.HttpTransportOverHTTP2.send(HttpTransportOverHTTP2.java:100)
+        at org.eclipse.jetty.server.HttpChannel.sendResponse(HttpChannel.java:591)
+        at org.eclipse.jetty.server.HttpChannel$CommitCallback.failed(HttpChannel.java:712)
+        at org.eclipse.jetty.http2.server.HttpTransportOverHTTP2.send(HttpTransportOverHTTP2.java:100)
+        at org.eclipse.jetty.server.HttpChannel.sendResponse(HttpChannel.java:591)
+        at org.eclipse.jetty.server.HttpChannel$CommitCallback.failed(HttpChannel.java:712)
+        at org.eclipse.jetty.http2.server.HttpTransportOverHTTP2.send(HttpTransportOverHTTP2.java:100)
+        at org.eclipse.jetty.server.HttpChannel.sendResponse(HttpChannel.java:591)
+        at org.eclipse.jetty.server.HttpChannel$CommitCallback.failed(HttpChannel.java:712)
+        at org.eclipse.jetty.http2.server.HttpTransportOverHTTP2.send(HttpTransportOverHTTP2.java:100)
+        at org.eclipse.jetty.server.HttpChannel.sendResponse(HttpChannel.java:591)
+        at org.eclipse.jetty.server.HttpChannel$CommitCallback.failed(HttpChannel.java:712)
+        at org.eclipse.jetty.http2.server.HttpTransportOverHTTP2.send(HttpTransportOverHTTP2.java:100)
+        at org.eclipse.jetty.server.HttpChannel.sendResponse(HttpChannel.java:591)
+        at org.eclipse.jetty.server.HttpChannel$CommitCallback.failed(HttpChannel.java:712)
+        at org.eclipse.jetty.http2.server.HttpTransportOverHTTP2.send(HttpTransportOverHTTP2.java:100)
+        at org.eclipse.jetty.server.HttpChannel.sendResponse(HttpChannel.java:591)
+        at org.eclipse.jetty.server.HttpChannel$CommitCallback.failed(HttpChannel.java:712)
+        at org.eclipse.jetty.http2.server.HttpTransportOverHTTP2.send(HttpTransportOverHTTP2.java:100)
+        at org.eclipse.jetty.server.HttpChannel.sendResponse(HttpChannel.java:591)
+        at org.eclipse.jetty.server.HttpChannel$CommitCallback.failed(HttpChannel.java:712)
+        at org.eclipse.jetty.http2.server.HttpTransportOverHTTP2.send(HttpTransportOverHTTP2.java:100)
+        at org.eclipse.jetty.server.HttpChannel.sendResponse(HttpChannel.java:591)
+        at org.eclipse.jetty.server.HttpChannel$CommitCallback.failed(HttpChannel.java:712)
+        at org.eclipse.jetty.http2.server.HttpTransportOverHTTP2.send(HttpTransportOverHTTP2.java:100)
+        at org.eclipse.jetty.server.HttpChannel.sendResponse(HttpChannel.java:591)
+        at org.eclipse.jetty.server.HttpChannel$CommitCallback.failed(HttpChannel.java:712)
+        at org.eclipse.jetty.http2.server.HttpTransportOverHTTP2.send(HttpTransportOverHTTP2.java:100)
+        at org.eclipse.jetty.server.HttpChannel.sendResponse(HttpChannel.java:591)
+        at org.eclipse.jetty.server.HttpChannel$CommitCallback.failed(HttpChannel.java:712)
+        at org.eclipse.jetty.http2.server.HttpTransportOverHTTP2.send(HttpTransportOverHTTP2.java:100)
+        at org.eclipse.jetty.server.HttpChannel.sendResponse(HttpChannel.java:591)
+        at org.eclipse.jetty.server.HttpChannel$CommitCallback.failed(HttpChannel.java:712)
+        at org.eclipse.jetty.http2.server.HttpTransportOverHTTP2.send(HttpTransportOverHTTP2.java:100)
+        at org.eclipse.jetty.server.HttpChannel.sendResponse(HttpChannel.java:591)
+        at org.eclipse.jetty.server.HttpChannel$CommitCallback.failed(HttpChannel.java:712)
+        at org.eclipse.jetty.http2.server.HttpTransportOverHTTP2.send(HttpTransportOverHTTP2.java:100)
+        at org.eclipse.jetty.server.HttpChannel.sendResponse(HttpChannel.java:591)
+        at org.eclipse.jetty.server.HttpChannel$CommitCallback.failed(HttpChannel.java:712)
+        at org.eclipse.jetty.http2.server.HttpTransportOverHTTP2.send(HttpTransportOverHTTP2.java:100)
+        at org.eclipse.jetty.server.HttpChannel.sendResponse(HttpChannel.java:591)
+        at org.eclipse.jetty.server.HttpChannel$CommitCallback.failed(HttpChannel.java:712)
+        at org.eclipse.jetty.http2.server.HttpTransportOverHTTP2.send(HttpTransportOverHTTP2.java:100)
+        at org.eclipse.jetty.server.HttpChannel.sendResponse(HttpChannel.java:591)
+        at org.eclipse.jetty.server.HttpChannel$CommitCallback.failed(HttpChannel.java:712)
+        at org.eclipse.jetty.http2.server.HttpTransportOverHTTP2.send(HttpTransportOverHTTP2.java:100)
+        at org.eclipse.jetty.server.HttpChannel.sendResponse(HttpChannel.java:591)
+        at org.eclipse.jetty.server.HttpChannel$CommitCallback.failed(HttpChannel.java:712)
+        at org.eclipse.jetty.http2.server.HttpTransportOverHTTP2.send(HttpTransportOverHTTP2.java:100)
+        at org.eclipse.jetty.server.HttpChannel.sendResponse(HttpChannel.java:591)
+        at org.eclipse.jetty.server.HttpChannel$CommitCallback.failed(HttpChannel.java:712)
+        at org.eclipse.jetty.http2.server.HttpTransportOverHTTP2.send(HttpTransportOverHTTP2.java:100)
+        at org.eclipse.jetty.server.HttpChannel.sendResponse(HttpChannel.java:591)
+        at org.eclipse.jetty.server.HttpChannel$CommitCallback.failed(HttpChannel.java:712)
+        at org.eclipse.jetty.http2.server.HttpTransportOverHTTP2.send(HttpTransportOverHTTP2.java:100)
+        at org.eclipse.jetty.server.HttpChannel.sendResponse(HttpChannel.java:591)
+        at org.eclipse.jetty.server.HttpChannel$CommitCallback.failed(HttpChannel.java:712)
+        at org.eclipse.jetty.http2.server.HttpTransportOverHTTP2.send(HttpTransportOverHTTP2.java:100)
+        at org.eclipse.jetty.server.HttpChannel.sendResponse(HttpChannel.java:591)
+        at org.eclipse.jetty.server.HttpChannel$CommitCallback.failed(HttpChannel.java:712)
+        at org.eclipse.jetty.http2.server.HttpTransportOverHTTP2.send(HttpTransportOverHTTP2.java:100)
+        at org.eclipse.jetty.server.HttpChannel.sendResponse(HttpChannel.java:591)
+        at org.eclipse.jetty.server.HttpChannel$CommitCallback.failed(HttpChannel.java:712)
+        at org.eclipse.jetty.http2.server.HttpTransportOverHTTP2.send(HttpTransportOverHTTP2.java:100)
+        at org.eclipse.jetty.server.HttpChannel.sendResponse(HttpChannel.java:591)
+        at org.eclipse.jetty.server.HttpChannel$CommitCallback.failed(HttpChannel.java:712)
+        at org.eclipse.jetty.http2.server.HttpTransportOverHTTP2.send(HttpTransportOverHTTP2.java:100)
+        at org.eclipse.jetty.server.HttpChannel.sendResponse(HttpChannel.java:591)
+        at org.eclipse.jetty.server.HttpChannel$CommitCallback.failed(HttpChannel.java:712)
+        at org.eclipse.jetty.http2.server.HttpTransportOverHTTP2.send(HttpTransportOverHTTP2.java:100)
+        at org.eclipse.jetty.server.HttpChannel.sendResponse(HttpChannel.java:591)
+        at org.eclipse.jetty.server.HttpChannel$CommitCallback.failed(HttpChannel.java:712)
+        at org.eclipse.jetty.http2.server.HttpTransportOverHTTP2.send(HttpTransportOverHTTP2.java:100)
+        at org.eclipse.jetty.server.HttpChannel.sendResponse(HttpChannel.java:591)
+        at org.eclipse.jetty.server.HttpChannel$CommitCallback.failed(HttpChannel.java:712)
+        at org.eclipse.jetty.http2.server.HttpTransportOverHTTP2.send(HttpTransportOverHTTP2.java:100)
+        at org.eclipse.jetty.server.HttpChannel.sendResponse(HttpChannel.java:591)
+        at org.eclipse.jetty.server.HttpChannel$CommitCallback.failed(HttpChannel.java:712)
+        at org.eclipse.jetty.http2.server.HttpTransportOverHTTP2.send(HttpTransportOverHTTP2.java:100)
+        at org.eclipse.jetty.server.HttpChannel.sendResponse(HttpChannel.java:591)
+        at org.eclipse.jetty.server.HttpChannel$CommitCallback.failed(HttpChannel.java:712)
+        at org.eclipse.jetty.http2.server.HttpTransportOverHTTP2.send(HttpTransportOverHTTP2.java:100)
+        at org.eclipse.jetty.server.HttpChannel.sendResponse(HttpChannel.java:591)
+        at org.eclipse.jetty.server.HttpChannel$CommitCallback.failed(HttpChannel.java:712)
+        at org.eclipse.jetty.http2.server.HttpTransportOverHTTP2.send(HttpTransportOverHTTP2.java:100)
+        at org.eclipse.jetty.server.HttpChannel.sendResponse(HttpChannel.java:591)
+        at org.eclipse.jetty.server.HttpChannel$CommitCallback.failed(HttpChannel.java:712)
+        at org.eclipse.jetty.http2.server.HttpTransportOverHTTP2.send(HttpTransportOverHTTP2.java:100)
+        at org.eclipse.jetty.server.HttpChannel.sendResponse(HttpChannel.java:591)
+        at org.eclipse.jetty.server.HttpChannel$CommitCallback.failed(HttpChannel.java:712)
+        at org.eclipse.jetty.http2.server.HttpTransportOverHTTP2.send(HttpTransportOverHTTP2.java:100)
+        at org.eclipse.jetty.server.HttpChannel.sendResponse(HttpChannel.java:591)
+        at org.eclipse.jetty.server.HttpChannel$CommitCallback.failed(HttpChannel.java:712)
+        at org.eclipse.jetty.http2.server.HttpTransportOverHTTP2.send(HttpTransportOverHTTP2.java:100)
+        at org.eclipse.jetty.server.HttpChannel.sendResponse(HttpChannel.java:591)
+        at org.eclipse.jetty.server.HttpChannel$CommitCallback.failed(HttpChannel.java:712)
+        at org.eclipse.jetty.http2.server.HttpTransportOverHTTP2.send(HttpTransportOverHTTP2.java:100)
+        at org.eclipse.jetty.server.HttpChannel.sendResponse(HttpChannel.java:591)
+        at org.eclipse.jetty.server.HttpChannel$CommitCallback.failed(HttpChannel.java:712)
+        at org.eclipse.jetty.http2.server.HttpTransportOverHTTP2.send(HttpTransportOverHTTP2.java:100)
+        at org.eclipse.jetty.server.HttpChannel.sendResponse(HttpChannel.java:591)
+        at org.eclipse.jetty.server.HttpChannel$CommitCallback.failed(HttpChannel.java:712)
+        at org.eclipse.jetty.http2.server.HttpTransportOverHTTP2.send(HttpTransportOverHTTP2.java:100)
+        at org.eclipse.jetty.server.HttpChannel.sendResponse(HttpChannel.java:591)
+        at org.eclipse.jetty.server.HttpChannel$CommitCallback.failed(HttpChannel.java:712)
+        at org.eclipse.jetty.http2.server.HttpTransportOverHTTP2.send(HttpTransportOverHTTP2.java:100)
+        at org.eclipse.jetty.server.HttpChannel.sendResponse(HttpChannel.java:591)
+        at org.eclipse.jetty.server.HttpChannel$CommitCallback.failed(HttpChannel.java:712)
+        at org.eclipse.jetty.http2.server.HttpTransportOverHTTP2.send(HttpTransportOverHTTP2.java:100)
+        at org.eclipse.jetty.server.HttpChannel.sendResponse(HttpChannel.java:591)
+        at org.eclipse.jetty.server.HttpChannel$CommitCallback.failed(HttpChannel.java:712)
+        at org.eclipse.jetty.http2.server.HttpTransportOverHTTP2.send(HttpTransportOverHTTP2.java:100)
+        at org.eclipse.jetty.server.HttpChannel.sendResponse(HttpChannel.java:591)
+        at org.eclipse.jetty.server.HttpChannel$CommitCallback.failed(HttpChannel.java:712)
+        at org.eclipse.jetty.http2.server.HttpTransportOverHTTP2.send(HttpTransportOverHTTP2.java:100)
+        at org.eclipse.jetty.server.HttpChannel.sendResponse(HttpChannel.java:591)
+        at org.eclipse.jetty.server.HttpChannel$CommitCallback.failed(HttpChannel.java:712)
+        at org.eclipse.jetty.http2.server.HttpTransportOverHTTP2.send(HttpTransportOverHTTP2.java:100)
+        at org.eclipse.jetty.server.HttpChannel.sendResponse(HttpChannel.java:591)
+        at org.eclipse.jetty.server.HttpChannel$CommitCallback.failed(HttpChannel.java:712)
+        at org.eclipse.jetty.http2.server.HttpTransportOverHTTP2.send(HttpTransportOverHTTP2.java:100)
+        at org.eclipse.jetty.server.HttpChannel.sendResponse(HttpChannel.java:591)
+        at org.eclipse.jetty.server.HttpChannel$CommitCallback.failed(HttpChannel.java:712)
+        at org.eclipse.jetty.http2.server.HttpTransportOverHTTP2.send(HttpTransportOverHTTP2.java:100)
+        at org.eclipse.jetty.server.HttpChannel.sendResponse(HttpChannel.java:591)
+        at org.eclipse.jetty.server.HttpChannel$CommitCallback.failed(HttpChannel.java:712)
+        at org.eclipse.jetty.http2.server.HttpTransportOverHTTP2.send(HttpTransportOverHTTP2.java:100)
+        at org.eclipse.jetty.server.HttpChannel.sendResponse(HttpChannel.java:591)
+        at org.eclipse.jetty.server.HttpChannel$CommitCallback.failed(HttpChannel.java:712)
+        at org.eclipse.jetty.http2.server.HttpTransportOverHTTP2.send(HttpTransportOverHTTP2.java:100)
+        at org.eclipse.jetty.server.HttpChannel.sendResponse(HttpChannel.java:591)
+        at org.eclipse.jetty.server.HttpChannel$CommitCallback.failed(HttpChannel.java:712)
+        at org.eclipse.jetty.http2.server.HttpTransportOverHTTP2.send(HttpTransportOverHTTP2.java:100)
+        at org.eclipse.jetty.server.HttpChannel.sendResponse(HttpChannel.java:591)
+        at org.eclipse.jetty.server.HttpChannel$CommitCallback.failed(HttpChannel.java:712)
+        at org.eclipse.jetty.http2.server.HttpTransportOverHTTP2.send(HttpTransportOverHTTP2.java:100)
+        at org.eclipse.jetty.server.HttpChannel.sendResponse(HttpChannel.java:591)
+        at org.eclipse.jetty.server.HttpChannel$CommitCallback.failed(HttpChannel.java:712)
+        at org.eclipse.jetty.http2.server.HttpTransportOverHTTP2.send(HttpTransportOverHTTP2.java:100)
+        at org.eclipse.jetty.server.HttpChannel.sendResponse(HttpChannel.java:591)
+        at org.eclipse.jetty.server.HttpChannel$CommitCallback.failed(HttpChannel.java:712)
+        at org.eclipse.jetty.http2.server.HttpTransportOverHTTP2.send(HttpTransportOverHTTP2.java:100)
+        at org.eclipse.jetty.server.HttpChannel.sendResponse(HttpChannel.java:591)
+        at org.eclipse.jetty.server.HttpChannel$CommitCallback.failed(HttpChannel.java:712)
+        at org.eclipse.jetty.http2.server.HttpTransportOverHTTP2.send(HttpTransportOverHTTP2.java:100)
+        at org.eclipse.jetty.server.HttpChannel.sendResponse(HttpChannel.java:591)
+        at org.eclipse.jetty.server.HttpChannel$CommitCallback.failed(HttpChannel.java:712)
+        at org.eclipse.jetty.http2.server.HttpTransportOverHTTP2.send(HttpTransportOverHTTP2.java:100)
+        at org.eclipse.jetty.server.HttpChannel.sendResponse(HttpChannel.java:591)
+        at org.eclipse.jetty.server.HttpChannel$CommitCallback.failed(HttpChannel.java:712)
+        at org.eclipse.jetty.http2.server.HttpTransportOverHTTP2.send(HttpTransportOverHTTP2.java:100)
+        at org.eclipse.jetty.server.HttpChannel.sendResponse(HttpChannel.java:591)
+        at org.eclipse.jetty.server.HttpChannel$CommitCallback.failed(HttpChannel.java:712)
+        at org.eclipse.jetty.http2.server.HttpTransportOverHTTP2.send(HttpTransportOverHTTP2.java:100)
+        at org.eclipse.jetty.server.HttpChannel.sendResponse(HttpChannel.java:591)
+        at org.eclipse.jetty.server.HttpChannel$CommitCallback.failed(HttpChannel.java:712)
+        at org.eclipse.jetty.http2.server.HttpTransportOverHTTP2.send(HttpTransportOverHTTP2.java:100)
+        at org.eclipse.jetty.server.HttpChannel.sendResponse(HttpChannel.java:591)
+        at org.eclipse.jetty.server.HttpChannel$CommitCallback.failed(HttpChannel.java:712)
+        at org.eclipse.jetty.http2.server.HttpTransportOverHTTP2.send(HttpTransportOverHTTP2.java:100)
+        at org.eclipse.jetty.server.HttpChannel.sendResponse(HttpChannel.java:591)
+        at org.eclipse.jetty.server.HttpChannel$CommitCallback.failed(HttpChannel.java:712)
+        at org.eclipse.jetty.http2.server.HttpTransportOverHTTP2.send(HttpTransportOverHTTP2.java:100)
+        at org.eclipse.jetty.server.HttpChannel.sendResponse(HttpChannel.java:591)
+        at org.eclipse.jetty.server.HttpChannel$CommitCallback.failed(HttpChannel.java:712)
+        at org.eclipse.jetty.http2.server.HttpTransportOverHTTP2.send(HttpTransportOverHTTP2.java:100)
+        at org.eclipse.jetty.server.HttpChannel.sendResponse(HttpChannel.java:591)
+        at org.eclipse.jetty.server.HttpChannel$CommitCallback.failed(HttpChannel.java:712)
+        at org.eclipse.jetty.http2.server.HttpTransportOverHTTP2.send(HttpTransportOverHTTP2.java:100)
+        at org.eclipse.jetty.server.HttpChannel.sendResponse(HttpChannel.java:591)
+        at org.eclipse.jetty.server.HttpChannel$CommitCallback.failed(HttpChannel.java:712)
+        at org.eclipse.jetty.http2.server.HttpTransportOverHTTP2.send(HttpTransportOverHTTP2.java:100)
+        at org.eclipse.jetty.server.HttpChannel.sendResponse(HttpChannel.java:591)
+        at org.eclipse.jetty.server.HttpChannel$CommitCallback.failed(HttpChannel.java:712)
+        at org.eclipse.jetty.http2.server.HttpTransportOverHTTP2.send(HttpTransportOverHTTP2.java:100)
+        at org.eclipse.jetty.server.HttpChannel.sendResponse(HttpChannel.java:591)
+        at org.eclipse.jetty.server.HttpChannel$CommitCallback.failed(HttpChannel.java:712)
+        at org.eclipse.jetty.http2.server.HttpTransportOverHTTP2.send(HttpTransportOverHTTP2.java:100)
+        at org.eclipse.jetty.server.HttpChannel.sendResponse(HttpChannel.java:591)
+        at org.eclipse.jetty.server.HttpChannel$CommitCallback.failed(HttpChannel.java:712)
+        at org.eclipse.jetty.http2.server.HttpTransportOverHTTP2.send(HttpTransportOverHTTP2.java:100)
+        at org.eclipse.jetty.server.HttpChannel.sendResponse(HttpChannel.java:591)
+        at org.eclipse.jetty.server.HttpChannel$CommitCallback.failed(HttpChannel.java:712)
+        at org.eclipse.jetty.http2.server.HttpTransportOverHTTP2.send(HttpTransportOverHTTP2.java:100)
+        at org.eclipse.jetty.server.HttpChannel.sendResponse(HttpChannel.java:591)
+        at org.eclipse.jetty.server.HttpChannel$CommitCallback.failed(HttpChannel.java:712)
+        at org.eclipse.jetty.http2.server.HttpTransportOverHTTP2.send(HttpTransportOverHTTP2.java:100)
+        at org.eclipse.jetty.server.HttpChannel.sendResponse(HttpChannel.java:591)
+        at org.eclipse.jetty.server.HttpChannel$CommitCallback.failed(HttpChannel.java:712)
+        at org.eclipse.jetty.http2.server.HttpTransportOverHTTP2.send(HttpTransportOverHTTP2.java:100)
+        at org.eclipse.jetty.server.HttpChannel.sendResponse(HttpChannel.java:591)
+        at org.eclipse.jetty.server.HttpChannel$CommitCallback.failed(HttpChannel.java:712)
+        at org.eclipse.jetty.http2.server.HttpTransportOverHTTP2.send(HttpTransportOverHTTP2.java:100)
+        at org.eclipse.jetty.server.HttpChannel.sendResponse(HttpChannel.java:591)
+        at org.eclipse.jetty.server.HttpChannel$CommitCallback.failed(HttpChannel.java:712)
+        at org.eclipse.jetty.http2.server.HttpTransportOverHTTP2.send(HttpTransportOverHTTP2.java:100)
+        at org.eclipse.jetty.server.HttpChannel.sendResponse(HttpChannel.java:591)
+        at org.eclipse.jetty.server.HttpChannel$CommitCallback.failed(HttpChannel.java:712)
+        at org.eclipse.jetty.http2.server.HttpTransportOverHTTP2.send(HttpTransportOverHTTP2.java:100)
+        at org.eclipse.jetty.server.HttpChannel.sendResponse(HttpChannel.java:591)
+        at org.eclipse.jetty.server.HttpChannel$CommitCallback.failed(HttpChannel.java:712)
+        at org.eclipse.jetty.http2.server.HttpTransportOverHTTP2.send(HttpTransportOverHTTP2.java:100)
+        at org.eclipse.jetty.server.HttpChannel.sendResponse(HttpChannel.java:591)
+        at org.eclipse.jetty.server.HttpChannel$CommitCallback.failed(HttpChannel.java:712)
+        at org.eclipse.jetty.http2.server.HttpTransportOverHTTP2.send(HttpTransportOverHTTP2.java:100)
+        at org.eclipse.jetty.server.HttpChannel.sendResponse(HttpChannel.java:591)
+        at org.eclipse.jetty.server.HttpChannel$CommitCallback.failed(HttpChannel.java:712)
+        at org.eclipse.jetty.http2.server.HttpTransportOverHTTP2.send(HttpTransportOverHTTP2.java:100)
+        at org.eclipse.jetty.server.HttpChannel.sendResponse(HttpChannel.java:591)
+        at org.eclipse.jetty.server.HttpChannel$CommitCallback.failed(HttpChannel.java:712)
+        at org.eclipse.jetty.http2.server.HttpTransportOverHTTP2.send(HttpTransportOverHTTP2.java:100)
+        at org.eclipse.jetty.server.HttpChannel.sendResponse(HttpChannel.java:591)
+        at org.eclipse.jetty.server.HttpChannel$CommitCallback.failed(HttpChannel.java:712)
+        at org.eclipse.jetty.http2.server.HttpTransportOverHTTP2.send(HttpTransportOverHTTP2.java:100)
+        at org.eclipse.jetty.server.HttpChannel.sendResponse(HttpChannel.java:591)
+        at org.eclipse.jetty.server.HttpChannel$CommitCallback.failed(HttpChannel.java:712)
+        at org.eclipse.jetty.http2.server.HttpTransportOverHTTP2.send(HttpTransportOverHTTP2.java:100)
+        at org.eclipse.jetty.server.HttpChannel.sendResponse(HttpChannel.java:591)
+        at org.eclipse.jetty.server.HttpChannel$CommitCallback.failed(HttpChannel.java:712)
+        at org.eclipse.jetty.http2.server.HttpTransportOverHTTP2.send(HttpTransportOverHTTP2.java:100)
+        at org.eclipse.jetty.server.HttpChannel.sendResponse(HttpChannel.java:591)
+        at org.eclipse.jetty.server.HttpChannel$CommitCallback.failed(HttpChannel.java:712)
+        at org.eclipse.jetty.http2.server.HttpTransportOverHTTP2.send(HttpTransportOverHTTP2.java:100)
+        at org.eclipse.jetty.server.HttpChannel.sendResponse(HttpChannel.java:591)
+        at org.eclipse.jetty.server.HttpChannel$CommitCallback.failed(HttpChannel.java:712)
+        at org.eclipse.jetty.http2.server.HttpTransportOverHTTP2.send(HttpTransportOverHTTP2.java:100)
+        at org.eclipse.jetty.server.HttpChannel.sendResponse(HttpChannel.java:591)
+        at org.eclipse.jetty.server.HttpChannel$CommitCallback.failed(HttpChannel.java:712)
+        at org.eclipse.jetty.http2.server.HttpTransportOverHTTP2.send(HttpTransportOverHTTP2.java:100)
+        at org.eclipse.jetty.server.HttpChannel.sendResponse(HttpChannel.java:591)
+        at org.eclipse.jetty.server.HttpChannel$CommitCallback.failed(HttpChannel.java:712)
+        at org.eclipse.jetty.http2.server.HttpTransportOverHTTP2.send(HttpTransportOverHTTP2.java:100)
+        at org.eclipse.jetty.server.HttpChannel.sendResponse(HttpChannel.java:591)
+        at org.eclipse.jetty.server.HttpChannel$CommitCallback.failed(HttpChannel.java:712)
+        at org.eclipse.jetty.http2.server.HttpTransportOverHTTP2.send(HttpTransportOverHTTP2.java:100)
+        at org.eclipse.jetty.server.HttpChannel.sendResponse(HttpChannel.java:591)
+        at org.eclipse.jetty.server.HttpChannel$CommitCallback.failed(HttpChannel.java:712)
+        at org.eclipse.jetty.http2.server.HttpTransportOverHTTP2.send(HttpTransportOverHTTP2.java:100)
+        at org.eclipse.jetty.server.HttpChannel.sendResponse(HttpChannel.java:591)
+        at org.eclipse.jetty.server.HttpChannel$CommitCallback.failed(HttpChannel.java:712)
+        at org.eclipse.jetty.http2.server.HttpTransportOverHTTP2.send(HttpTransportOverHTTP2.java:100)
+        at org.eclipse.jetty.server.HttpChannel.sendResponse(HttpChannel.java:591)
+        at org.eclipse.jetty.server.HttpChannel$CommitCallback.failed(HttpChannel.java:712)
+        at org.eclipse.jetty.http2.server.HttpTransportOverHTTP2.send(HttpTransportOverHTTP2.java:100)
+        at org.eclipse.jetty.server.HttpChannel.sendResponse(HttpChannel.java:591)

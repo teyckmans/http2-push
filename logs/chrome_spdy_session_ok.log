@@ -1,0 +1,288 @@
+5593: SPDY_SESSION
+146.148.90.85:8443 (DIRECT)
+Start Time: 2015-01-18 21:58:00.865
+
+t=393701 [st=   0] +SPDY_SESSION  [dt=2669]
+                    --> host = "146.148.90.85:8443"
+                    --> proxy = "DIRECT"
+t=393701 [st=   0]    SPDY_SESSION_INITIALIZED
+                      --> protocol = "h2-14"
+                      --> source_dependency = 5589 (SOCKET)
+t=393701 [st=   0]    SPDY_SESSION_SEND_SETTINGS
+                      --> settings = ["[id:3 flags:0 value:1000]","[id:4 flags:0 value:10485760]"]
+t=393701 [st=   0]    SPDY_STREAM_UPDATE_RECV_WINDOW
+                      --> delta = 10420225
+                      --> window_size = 10485760
+t=393701 [st=   0]    SPDY_SESSION_SENT_WINDOW_UPDATE_FRAME
+                      --> delta = 10420225
+                      --> stream_id = 0
+t=393701 [st=   0]    SPDY_SESSION_SYN_STREAM
+                      --> fin = true
+                      --> :authority: 146.148.90.85:8443
+                          :method: GET
+                          :path: /blog-http2-push/push?push=true&rows=1&columns=1
+                          :scheme: https
+                          accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+                          accept-encoding: gzip, deflate, sdch
+                          accept-language: nl-NL,nl;q=0.8,en-US;q=0.6,en;q=0.4
+                          cache-control: no-cache
+                          cookie: [35 bytes were stripped]
+                          pragma: no-cache
+                          user-agent: Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2279.2 Safari/537.36
+                      --> spdy_priority = 0
+                      --> stream_id = 1
+                      --> unidirectional = false
+t=393899 [st= 198]    SPDY_SESSION_RECV_SETTINGS
+                      --> clear_persisted = false
+                      --> host = "146.148.90.85:8443"
+t=393899 [st= 198]    SPDY_SESSION_RECV_SETTING
+                      --> flags = 0
+                      --> id = 1
+                      --> value = 4096
+t=393899 [st= 198]    SPDY_SESSION_RECV_SETTING
+                      --> flags = 0
+                      --> id = 3
+                      --> value = 1024
+t=393899 [st= 198]    SPDY_SESSION_UPDATE_STREAMS_SEND_WINDOW_SIZE
+                      --> delta_window_size = 0
+t=393899 [st= 198]    SPDY_SESSION_RECV_SETTING
+                      --> flags = 0
+                      --> id = 4
+                      --> value = 65535
+t=393903 [st= 202]    SPDY_SESSION_RECV_PUSH_PROMISE
+                      --> :authority: 146.148.90.85:8443
+                          :method: GET
+                          :path: /blog-http2-push/images/slice_0_0.jpg
+                          :scheme: https
+                          accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+                          accept-encoding: gzip, deflate, sdch
+                          accept-language: nl-NL,nl;q=0.8,en-US;q=0.6,en;q=0.4
+                          cache-control: no-cache
+                          pragma: no-cache
+                          referer: https://146.148.90.85:8443/blog-http2-push/push
+                          user-agent: Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2279.2 Safari/537.36
+                      --> id = 1
+                      --> promised_stream_id = 2
+t=393903 [st= 202]    SPDY_SESSION_RECV_PUSH_PROMISE
+                      --> :authority: 146.148.90.85:8443
+                          :method: GET
+                          :path: /blog-http2-push/images/slice_0_1.jpg
+                          :scheme: https
+                          accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+                          accept-encoding: gzip, deflate, sdch
+                          accept-language: nl-NL,nl;q=0.8,en-US;q=0.6,en;q=0.4
+                          cache-control: no-cache
+                          pragma: no-cache
+                          referer: https://146.148.90.85:8443/blog-http2-push/push
+                          user-agent: Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2279.2 Safari/537.36
+                      --> id = 1
+                      --> promised_stream_id = 4
+t=393903 [st= 202]    SPDY_SESSION_RECV_PUSH_PROMISE
+                      --> :authority: 146.148.90.85:8443
+                          :method: GET
+                          :path: /blog-http2-push/images/slice_1_0.jpg
+                          :scheme: https
+                          accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+                          accept-encoding: gzip, deflate, sdch
+                          accept-language: nl-NL,nl;q=0.8,en-US;q=0.6,en;q=0.4
+                          cache-control: no-cache
+                          pragma: no-cache
+                          referer: https://146.148.90.85:8443/blog-http2-push/push
+                          user-agent: Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2279.2 Safari/537.36
+                      --> id = 1
+                      --> promised_stream_id = 6
+t=393903 [st= 202]    SPDY_SESSION_RECV_PUSH_PROMISE
+                      --> :authority: 146.148.90.85:8443
+                          :method: GET
+                          :path: /blog-http2-push/images/slice_1_1.jpg
+                          :scheme: https
+                          accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+                          accept-encoding: gzip, deflate, sdch
+                          accept-language: nl-NL,nl;q=0.8,en-US;q=0.6,en;q=0.4
+                          cache-control: no-cache
+                          pragma: no-cache
+                          referer: https://146.148.90.85:8443/blog-http2-push/push
+                          user-agent: Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2279.2 Safari/537.36
+                      --> id = 1
+                      --> promised_stream_id = 8
+t=393903 [st= 202]    SPDY_SESSION_RECV_HEADERS
+                      --> fin = false
+                      --> :status: 200
+                          content-type: text/html;charset=utf-8
+                          server: Jetty(9.3.0-SNAPSHOT)
+                      --> stream_id = 1
+t=393904 [st= 203]    SPDY_SESSION_RECV_DATA
+                      --> fin = false
+                      --> size = 518
+                      --> stream_id = 1
+t=393904 [st= 203]    SPDY_SESSION_UPDATE_RECV_WINDOW
+                      --> delta = -518
+                      --> window_size = 10485242
+t=393904 [st= 203]    SPDY_SESSION_RECV_DATA
+                      --> fin = true
+                      --> size = 0
+                      --> stream_id = 1
+t=393904 [st= 203]    SPDY_STREAM_UPDATE_RECV_WINDOW
+                      --> delta = 518
+                      --> window_size = 10485760
+t=393916 [st= 215]    SPDY_STREAM_ADOPTED_PUSH_STREAM
+                      --> stream_id = 2
+                      --> url = "https://146.148.90.85:8443/blog-http2-push/images/slice_0_0.jpg"
+t=393916 [st= 215]    SPDY_STREAM_ADOPTED_PUSH_STREAM
+                      --> stream_id = 4
+                      --> url = "https://146.148.90.85:8443/blog-http2-push/images/slice_0_1.jpg"
+t=393916 [st= 215]    SPDY_STREAM_ADOPTED_PUSH_STREAM
+                      --> stream_id = 6
+                      --> url = "https://146.148.90.85:8443/blog-http2-push/images/slice_1_0.jpg"
+t=393916 [st= 215]    SPDY_STREAM_ADOPTED_PUSH_STREAM
+                      --> stream_id = 8
+                      --> url = "https://146.148.90.85:8443/blog-http2-push/images/slice_1_1.jpg"
+t=394090 [st= 389]    SPDY_SESSION_RECV_HEADERS
+                      --> fin = false
+                      --> :status: 200
+                          accept-ranges: bytes
+                          content-length: 4326
+                          content-type: image/jpeg
+                          last-modified: Thu, 01 Jan 2015 20:36:08 GMT
+                      --> stream_id = 2
+t=394092 [st= 391]    SPDY_SESSION_RECV_DATA
+                      --> fin = false
+                      --> size = 4326
+                      --> stream_id = 2
+t=394092 [st= 391]    SPDY_SESSION_UPDATE_RECV_WINDOW
+                      --> delta = -4326
+                      --> window_size = 10481434
+t=394092 [st= 391]    SPDY_STREAM_UPDATE_RECV_WINDOW
+                      --> delta = -4326
+                      --> stream_id = 2
+                      --> window_size = 10481434
+t=394092 [st= 391]    SPDY_SESSION_RECV_DATA
+                      --> fin = true
+                      --> size = 0
+                      --> stream_id = 2
+t=394092 [st= 391]    SPDY_STREAM_UPDATE_RECV_WINDOW
+                      --> delta = 4326
+                      --> window_size = 10485760
+t=394093 [st= 392]    SPDY_SESSION_RECV_HEADERS
+                      --> fin = false
+                      --> :status: 200
+                          accept-ranges: bytes
+                          content-length: 4322
+                          content-type: image/jpeg
+                          last-modified: Thu, 01 Jan 2015 20:36:08 GMT
+                      --> stream_id = 4
+t=394095 [st= 394]    SPDY_SESSION_RECV_DATA
+                      --> fin = false
+                      --> size = 4322
+                      --> stream_id = 4
+t=394095 [st= 394]    SPDY_SESSION_UPDATE_RECV_WINDOW
+                      --> delta = -4322
+                      --> window_size = 10481438
+t=394095 [st= 394]    SPDY_STREAM_UPDATE_RECV_WINDOW
+                      --> delta = -4322
+                      --> stream_id = 4
+                      --> window_size = 10481438
+t=394095 [st= 394]    SPDY_SESSION_RECV_DATA
+                      --> fin = true
+                      --> size = 0
+                      --> stream_id = 4
+t=394095 [st= 394]    SPDY_STREAM_UPDATE_RECV_WINDOW
+                      --> delta = 4322
+                      --> window_size = 10485760
+t=394095 [st= 394]    SPDY_SESSION_RECV_HEADERS
+                      --> fin = false
+                      --> :status: 200
+                          accept-ranges: bytes
+                          content-length: 4321
+                          content-type: image/jpeg
+                          last-modified: Thu, 01 Jan 2015 20:36:08 GMT
+                      --> stream_id = 6
+t=394099 [st= 398]    SPDY_SESSION_RECV_DATA
+                      --> fin = false
+                      --> size = 4321
+                      --> stream_id = 6
+t=394099 [st= 398]    SPDY_SESSION_UPDATE_RECV_WINDOW
+                      --> delta = -4321
+                      --> window_size = 10481439
+t=394099 [st= 398]    SPDY_STREAM_UPDATE_RECV_WINDOW
+                      --> delta = -4321
+                      --> stream_id = 6
+                      --> window_size = 10481439
+t=394099 [st= 398]    SPDY_SESSION_RECV_DATA
+                      --> fin = true
+                      --> size = 0
+                      --> stream_id = 6
+t=394099 [st= 398]    SPDY_STREAM_UPDATE_RECV_WINDOW
+                      --> delta = 4321
+                      --> window_size = 10485760
+t=394278 [st= 577]    SPDY_SESSION_RECV_HEADERS
+                      --> fin = false
+                      --> :status: 200
+                          accept-ranges: bytes
+                          content-length: 4323
+                          content-type: image/jpeg
+                          last-modified: Thu, 01 Jan 2015 20:36:08 GMT
+                      --> stream_id = 8
+t=394279 [st= 578]    SPDY_SESSION_RECV_DATA
+                      --> fin = false
+                      --> size = 4323
+                      --> stream_id = 8
+t=394279 [st= 578]    SPDY_SESSION_UPDATE_RECV_WINDOW
+                      --> delta = -4323
+                      --> window_size = 10481437
+t=394279 [st= 578]    SPDY_STREAM_UPDATE_RECV_WINDOW
+                      --> delta = -4323
+                      --> stream_id = 8
+                      --> window_size = 10481437
+t=394279 [st= 578]    SPDY_SESSION_RECV_DATA
+                      --> fin = true
+                      --> size = 0
+                      --> stream_id = 8
+t=394279 [st= 578]    SPDY_STREAM_UPDATE_RECV_WINDOW
+                      --> delta = 4323
+                      --> window_size = 10485760
+t=394283 [st= 582]    SPDY_SESSION_SYN_STREAM
+                      --> fin = true
+                      --> :authority: 146.148.90.85:8443
+                          :method: GET
+                          :path: /favicon.ico
+                          :scheme: https
+                          accept: */*
+                          accept-encoding: gzip, deflate, sdch
+                          accept-language: nl-NL,nl;q=0.8,en-US;q=0.6,en;q=0.4
+                          cache-control: no-cache
+                          pragma: no-cache
+                          referer: https://146.148.90.85:8443/blog-http2-push/push?push=true&rows=1&columns=1
+                          user-agent: Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2279.2 Safari/537.36
+                      --> spdy_priority = 2
+                      --> stream_id = 3
+                      --> unidirectional = false
+t=394469 [st= 768]    SPDY_SESSION_RECV_HEADERS
+                      --> fin = false
+                      --> :status: 200
+                          cache-control: max-age=360000,public
+                          content-length: 1150
+                          content-type: image/x-icon
+                          last-modified: Sun, 18 Jan 2015 20:50:41 GMT
+                          server: Jetty(9.3.0-SNAPSHOT)
+                      --> stream_id = 3
+t=394471 [st= 770]    SPDY_SESSION_RECV_DATA
+                      --> fin = false
+                      --> size = 1150
+                      --> stream_id = 3
+t=394471 [st= 770]    SPDY_SESSION_UPDATE_RECV_WINDOW
+                      --> delta = -1150
+                      --> window_size = 10484610
+t=394471 [st= 770]    SPDY_SESSION_RECV_DATA
+                      --> fin = true
+                      --> size = 0
+                      --> stream_id = 3
+t=394471 [st= 770]    SPDY_STREAM_UPDATE_RECV_WINDOW
+                      --> delta = 1150
+                      --> window_size = 10485760
+t=396370 [st=2669]    SPDY_SESSION_CLOSE
+                      --> description = "Finished going away"
+                      --> net_error = 0 (?)
+t=396370 [st=2669]    SPDY_SESSION_POOL_REMOVE_SESSION
+                      --> source_dependency = 5593 (SPDY_SESSION)
+t=396370 [st=2669] -SPDY_SESSION
