@@ -1,5 +1,6 @@
 package eu.iadvise.blog.http2.push;
 
+import org.eclipse.jetty.server.PushBuilder;
 import org.eclipse.jetty.server.Request;
 
 import javax.servlet.annotation.WebServlet;
@@ -35,25 +36,16 @@ public class PushServlet extends AbstractHttpServlet
      *
      * Uses the Jetty request to get a {@link org.eclipse.jetty.server.PushBuilder} to execute the HTTP/2 push.
      *
-     * @param relativeResourcePath relative path of the resource to push
+     * @param resourcePath relative path of the resource to push
      */
-    private void pushResource(String relativeResourcePath)
+    private void pushResource(String resourcePath)
     {
         final Request jettyRequest = (Request) getRequest();
 
-        jettyRequest
-            .getPushBuilder()
-            .push(absoluteResourcePath(relativeResourcePath));
-    }
+        final PushBuilder pushBuilder = jettyRequest.getPushBuilder();
 
-    /**
-     * Prepends the context root to the resource path.
-     *
-     * @param relativeResourcePath relative resource path
-     * @return absolute resource path
-     */
-    private String absoluteResourcePath(String relativeResourcePath)
-    {
-        return "/blog-http2-push/" + relativeResourcePath;
+        pushBuilder
+                .setQueryString(null)
+                .push(resourcePath);
     }
 }
