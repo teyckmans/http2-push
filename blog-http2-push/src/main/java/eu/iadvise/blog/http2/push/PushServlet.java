@@ -15,7 +15,7 @@ public class PushServlet extends AbstractHttpServlet
     {
         final int rows = intParameter("rows", 19);
         final int columns = intParameter("columns", 19);
-        final boolean push = booleanParameter("push");
+        final boolean push = booleanParameter("push", true);
 
         final Page slicePage = new SlicePage(rows, columns);
 

@@ -4,6 +4,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.awt.datatransfer.StringSelection;
 import java.io.IOException;
 import java.io.PrintWriter;
 
@@ -71,6 +72,18 @@ public abstract class AbstractHttpServlet extends HttpServlet
     protected boolean booleanParameter(String parameterName)
     {
         return Boolean.valueOf(getRequest().getParameter(parameterName));
+    }
+
+    protected boolean booleanParameter(String parameterName, boolean defaultValue)
+    {
+        String stringValue = getRequest().getParameter(parameterName);
+
+        if (stringValue != null && "".equals(stringValue)) {
+            return Boolean.valueOf(stringValue);
+        }
+        else {
+            return defaultValue;
+        }
     }
 
     protected int intParameter(String parameterName)
