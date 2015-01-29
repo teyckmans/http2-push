@@ -1,0 +1,298 @@
+opened chrome on https://<boot2docker-ip>:8443/blog-http2-push/push?rows=1&columns=0
+
+
+2015-01-29 19:54:36.368:INFO::                                              main: Logging initialized @350ms
+2015-01-29 19:54:37.095:INFO:oejs.Server:                                   main: jetty-9.3.0-SNAPSHOT
+2015-01-29 19:54:37.198:INFO:oejdp.ScanningAppProvider:                     main: Deployment monitor [file:///jetty/jetty-distribution-9.3.0-SNAPSHOT/blog-http2-push/webapps/] at interval 1
+2015-01-29 19:54:38.007:INFO:oejw.StandardDescriptorProcessor:              main: NO JSP Support for /blog-http2-push, did not find org.eclipse.jetty.jsp.JettyJspServlet
+2015-01-29 19:54:38.101:INFO:oejsh.ContextHandler:                          main: Started o.e.j.w.WebAppContext@22f71333{/blog-http2-push,file:///tmp/jetty-0.0.0.0-8443-blog-http2-push.war-_blog-http2
+-push-any-5571012261090213073.dir/webapp/,AVAILABLE}{/blog-http2-push.war}
+2015-01-29 19:54:38.684:INFO:oejs.ServerConnector:                          main: Started ServerConnector@4c6e276e{SSL,[ssl, alpn, h2-15, h2-14]}{0.0.0.0:8443}
+2015-01-29 19:54:38.687:INFO:oejs.Server:                                   main: Started @2680ms
+2015-01-29 19:55:57.866:WARN:oeju.SharedBlockingCallback:        qtp396180261-15: Blocker not complete Blocker@61bc911a{null}
+2015-01-29 19:55:57.868:WARN:oejs.ServletHandler:                qtp396180261-15: /blog-http2-push/images/slice_0_0.jpg
+java.lang.IllegalStateException: state=CLOSED
+        at org.eclipse.jetty.util.IteratingCallback.iterate(IteratingCallback.java:220)
+        at org.eclipse.jetty.http2.HTTP2Session.frame(HTTP2Session.java:557)
+        at org.eclipse.jetty.http2.HTTP2Session.control(HTTP2Session.java:535)
+        at org.eclipse.jetty.http2.HTTP2Stream.reset(HTTP2Stream.java:97)
+        at org.eclipse.jetty.http2.server.HttpTransportOverHTTP2.abort(HttpTransportOverHTTP2.java:189)
+        at org.eclipse.jetty.server.HttpChannel.abort(HttpChannel.java:673)
+        at org.eclipse.jetty.server.HttpOutput.abort(HttpOutput.java:171)
+        at org.eclipse.jetty.server.HttpOutput.sendContent(HttpOutput.java:645)
+        at org.eclipse.jetty.servlet.DefaultServlet.sendData(DefaultServlet.java:988)
+        at org.eclipse.jetty.servlet.DefaultServlet.doGet(DefaultServlet.java:536)
+        at javax.servlet.http.HttpServlet.service(HttpServlet.java:687)
+        at javax.servlet.http.HttpServlet.service(HttpServlet.java:790)
+        at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:809)
+        at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:587)
+        at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:143)
+        at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:550)
+        at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:223)
+        at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1128)
+        at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:515)
+        at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:185)
+        at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1062)
+        at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+        at org.eclipse.jetty.server.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:215)
+        at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:110)
+        at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:113)
+        at org.eclipse.jetty.server.Server.handle(Server.java:507)
+        at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:285)
+        at org.eclipse.jetty.server.HttpChannel.run(HttpChannel.java:244)
+        at org.eclipse.jetty.util.thread.ExecutionStrategy$ExecuteProduceRun.run(ExecutionStrategy.java:243)
+        at org.eclipse.jetty.util.thread.ExecutionStrategy$ExecuteProduceRun.execute(ExecutionStrategy.java:194)
+        at org.eclipse.jetty.http2.HTTP2Connection.onFillable(HTTP2Connection.java:82)
+        at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:239)
+        at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:78)
+        at org.eclipse.jetty.io.ssl.SslConnection.onFillable(SslConnection.java:191)
+        at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:239)
+        at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:78)
+        at org.eclipse.jetty.io.SelectChannelEndPoint$2.run(SelectChannelEndPoint.java:56)
+        at org.eclipse.jetty.util.thread.ExecutionStrategy$ExecuteProduceRun.run(ExecutionStrategy.java:243)
+        at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:635)
+        at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:555)
+        at java.lang.Thread.run(Thread.java:745)
+2015-01-29 19:55:57.873:WARN:oejs.HttpChannel:                   qtp396180261-15: https://192.168.59.103:8443/blog-http2-push/images/slice_0_0.jpg
+java.lang.IllegalStateException: state=CLOSED
+        at org.eclipse.jetty.util.IteratingCallback.iterate(IteratingCallback.java:220)
+        at org.eclipse.jetty.http2.HTTP2Session.frame(HTTP2Session.java:557)
+        at org.eclipse.jetty.http2.HTTP2Session.control(HTTP2Session.java:535)
+        at org.eclipse.jetty.http2.HTTP2Stream.reset(HTTP2Stream.java:97)
+        at org.eclipse.jetty.http2.server.HttpTransportOverHTTP2.abort(HttpTransportOverHTTP2.java:189)
+        at org.eclipse.jetty.server.HttpChannel.abort(HttpChannel.java:673)
+        at org.eclipse.jetty.server.HttpOutput.abort(HttpOutput.java:171)
+        at org.eclipse.jetty.server.HttpOutput.sendContent(HttpOutput.java:645)
+        at org.eclipse.jetty.servlet.DefaultServlet.sendData(DefaultServlet.java:988)
+        at org.eclipse.jetty.servlet.DefaultServlet.doGet(DefaultServlet.java:536)
+        at javax.servlet.http.HttpServlet.service(HttpServlet.java:687)
+        at javax.servlet.http.HttpServlet.service(HttpServlet.java:790)
+        at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:809)
+        at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:587)
+        at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:143)
+        at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:550)
+        at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:223)
+        at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1128)
+        at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:515)
+        at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:185)
+        at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1062)
+        at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+        at org.eclipse.jetty.server.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:215)
+        at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:110)
+        at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:113)
+        at org.eclipse.jetty.server.Server.handle(Server.java:507)
+        at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:285)
+        at org.eclipse.jetty.server.HttpChannel.run(HttpChannel.java:244)
+        at org.eclipse.jetty.util.thread.ExecutionStrategy$ExecuteProduceRun.run(ExecutionStrategy.java:243)
+        at org.eclipse.jetty.util.thread.ExecutionStrategy$ExecuteProduceRun.execute(ExecutionStrategy.java:194)
+        at org.eclipse.jetty.http2.HTTP2Connection.onFillable(HTTP2Connection.java:82)
+        at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:239)
+        at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:78)
+        at org.eclipse.jetty.io.ssl.SslConnection.onFillable(SslConnection.java:191)
+        at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:239)
+        at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:78)
+        at org.eclipse.jetty.io.SelectChannelEndPoint$2.run(SelectChannelEndPoint.java:56)
+        at org.eclipse.jetty.util.thread.ExecutionStrategy$ExecuteProduceRun.run(ExecutionStrategy.java:243)
+        at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:635)
+        at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:555)
+        at java.lang.Thread.run(Thread.java:745)
+2015-01-29 19:55:57.865:WARN:oeju.SharedBlockingCallback:        qtp396180261-17: Blocker not complete Blocker@5491e358{null}
+2015-01-29 19:55:57.880:WARN:oejut.QueuedThreadPool:             qtp396180261-15:
+java.lang.IllegalStateException: state=CLOSED
+        at org.eclipse.jetty.util.IteratingCallback.iterate(IteratingCallback.java:220)
+        at org.eclipse.jetty.http2.HTTP2Session.frame(HTTP2Session.java:557)
+        at org.eclipse.jetty.http2.HTTP2Session.control(HTTP2Session.java:535)
+        at org.eclipse.jetty.http2.HTTP2Stream.reset(HTTP2Stream.java:97)
+        at org.eclipse.jetty.http2.server.HttpTransportOverHTTP2.abort(HttpTransportOverHTTP2.java:189)
+        at org.eclipse.jetty.server.HttpChannel.abort(HttpChannel.java:673)
+        at org.eclipse.jetty.server.HttpChannel.handleException(HttpChannel.java:456)
+        at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:378)
+        at org.eclipse.jetty.server.HttpChannel.run(HttpChannel.java:244)
+        at org.eclipse.jetty.util.thread.ExecutionStrategy$ExecuteProduceRun.run(ExecutionStrategy.java:243)
+        at org.eclipse.jetty.util.thread.ExecutionStrategy$ExecuteProduceRun.execute(ExecutionStrategy.java:194)
+        at org.eclipse.jetty.http2.HTTP2Connection.onFillable(HTTP2Connection.java:82)
+        at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:239)
+        at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:78)
+        at org.eclipse.jetty.io.ssl.SslConnection.onFillable(SslConnection.java:191)
+        at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:239)
+        at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:78)
+        at org.eclipse.jetty.io.SelectChannelEndPoint$2.run(SelectChannelEndPoint.java:56)
+        at org.eclipse.jetty.util.thread.ExecutionStrategy$ExecuteProduceRun.run(ExecutionStrategy.java:243)
+        at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:635)
+        at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:555)
+        at java.lang.Thread.run(Thread.java:745)
+2015-01-29 19:55:57.880:WARN:oejs.ServletHandler:                qtp396180261-17: /blog-http2-push/images/slice_1_0.jpg
+java.lang.IllegalStateException: state=CLOSED
+        at org.eclipse.jetty.util.IteratingCallback.iterate(IteratingCallback.java:220)
+        at org.eclipse.jetty.http2.HTTP2Session.frame(HTTP2Session.java:557)
+        at org.eclipse.jetty.http2.HTTP2Session.control(HTTP2Session.java:535)
+        at org.eclipse.jetty.http2.HTTP2Stream.reset(HTTP2Stream.java:97)
+        at org.eclipse.jetty.http2.server.HttpTransportOverHTTP2.abort(HttpTransportOverHTTP2.java:189)
+        at org.eclipse.jetty.server.HttpChannel.abort(HttpChannel.java:673)
+        at org.eclipse.jetty.server.HttpOutput.abort(HttpOutput.java:171)
+        at org.eclipse.jetty.server.HttpOutput.sendContent(HttpOutput.java:645)
+        at org.eclipse.jetty.servlet.DefaultServlet.sendData(DefaultServlet.java:988)
+        at org.eclipse.jetty.servlet.DefaultServlet.doGet(DefaultServlet.java:536)
+        at javax.servlet.http.HttpServlet.service(HttpServlet.java:687)
+        at javax.servlet.http.HttpServlet.service(HttpServlet.java:790)
+        at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:809)
+        at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:587)
+        at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:143)
+        at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:550)
+        at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:223)
+        at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1128)
+        at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:515)
+        at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:185)
+        at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1062)
+        at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+        at org.eclipse.jetty.server.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:215)
+        at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:110)
+        at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:113)
+        at org.eclipse.jetty.server.Server.handle(Server.java:507)
+        at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:285)
+        at org.eclipse.jetty.server.HttpChannel.run(HttpChannel.java:244)
+        at org.eclipse.jetty.util.thread.ExecutionStrategy$ExecuteProduceRun.run(ExecutionStrategy.java:243)
+        at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:635)
+        at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:555)
+        at java.lang.Thread.run(Thread.java:745)
+2015-01-29 19:55:57.896:WARN:oejut.QueuedThreadPool:             qtp396180261-15: Unexpected thread death: org.eclipse.jetty.util.thread.QueuedThreadPool$3@60316ff0 in qtp396180261{STARTED,10<=10<=200
+,i=4,q=0}
+2015-01-29 19:55:57.897:WARN:oejs.HttpChannel:                   qtp396180261-17: https://192.168.59.103:8443/blog-http2-push/images/slice_1_0.jpg
+java.lang.IllegalStateException: state=CLOSED
+        at org.eclipse.jetty.util.IteratingCallback.iterate(IteratingCallback.java:220)
+        at org.eclipse.jetty.http2.HTTP2Session.frame(HTTP2Session.java:557)
+        at org.eclipse.jetty.http2.HTTP2Session.control(HTTP2Session.java:535)
+        at org.eclipse.jetty.http2.HTTP2Stream.reset(HTTP2Stream.java:97)
+        at org.eclipse.jetty.http2.server.HttpTransportOverHTTP2.abort(HttpTransportOverHTTP2.java:189)
+        at org.eclipse.jetty.server.HttpChannel.abort(HttpChannel.java:673)
+        at org.eclipse.jetty.server.HttpOutput.abort(HttpOutput.java:171)
+        at org.eclipse.jetty.server.HttpOutput.sendContent(HttpOutput.java:645)
+        at org.eclipse.jetty.servlet.DefaultServlet.sendData(DefaultServlet.java:988)
+        at org.eclipse.jetty.servlet.DefaultServlet.doGet(DefaultServlet.java:536)
+        at javax.servlet.http.HttpServlet.service(HttpServlet.java:687)
+        at javax.servlet.http.HttpServlet.service(HttpServlet.java:790)
+        at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:809)
+        at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:587)
+        at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:143)
+        at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:550)
+        at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:223)
+        at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1128)
+        at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:515)
+        at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:185)
+        at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1062)
+        at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+        at org.eclipse.jetty.server.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:215)
+        at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:110)
+        at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:113)
+        at org.eclipse.jetty.server.Server.handle(Server.java:507)
+        at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:285)
+        at org.eclipse.jetty.server.HttpChannel.run(HttpChannel.java:244)
+        at org.eclipse.jetty.util.thread.ExecutionStrategy$ExecuteProduceRun.run(ExecutionStrategy.java:243)
+        at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:635)
+        at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:555)
+        at java.lang.Thread.run(Thread.java:745)
+2015-01-29 19:55:57.914:WARN:oejut.QueuedThreadPool:             qtp396180261-17:
+java.lang.IllegalStateException: state=CLOSED
+        at org.eclipse.jetty.util.IteratingCallback.iterate(IteratingCallback.java:220)
+        at org.eclipse.jetty.http2.HTTP2Session.frame(HTTP2Session.java:557)
+        at org.eclipse.jetty.http2.HTTP2Session.control(HTTP2Session.java:535)
+        at org.eclipse.jetty.http2.HTTP2Stream.reset(HTTP2Stream.java:97)
+        at org.eclipse.jetty.http2.server.HttpTransportOverHTTP2.abort(HttpTransportOverHTTP2.java:189)
+        at org.eclipse.jetty.server.HttpChannel.abort(HttpChannel.java:673)
+        at org.eclipse.jetty.server.HttpChannel.handleException(HttpChannel.java:456)
+        at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:378)
+        at org.eclipse.jetty.server.HttpChannel.run(HttpChannel.java:244)
+        at org.eclipse.jetty.util.thread.ExecutionStrategy$ExecuteProduceRun.run(ExecutionStrategy.java:243)
+        at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:635)
+        at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:555)
+        at java.lang.Thread.run(Thread.java:745)
+2015-01-29 19:55:57.914:WARN:oejut.QueuedThreadPool:             qtp396180261-17: Unexpected thread death: org.eclipse.jetty.util.thread.QueuedThreadPool$3@60316ff0 in qtp396180261{STARTED,10<=10<=200
+,i=4,q=0}
+
+
+
+
+
+
+
+
+4851: SPDY_SESSION
+192.168.59.103:8443 (DIRECT)
+Start Time: 2015-01-29 20:59:55.137
+
+t=78443 [st=    0] +SPDY_SESSION  [dt=10744]
+                    --> host = "192.168.59.103:8443"
+                    --> proxy = "DIRECT"
+t=78444 [st=    1]    SPDY_SESSION_INITIALIZED
+                      --> protocol = "h2-14"
+                      --> source_dependency = 4848 (SOCKET)
+t=78444 [st=    1]    SPDY_SESSION_SEND_SETTINGS
+                      --> settings = ["[id:3 flags:0 value:1000]","[id:4 flags:0 value:10485760]"]
+t=78444 [st=    1]    SPDY_STREAM_UPDATE_RECV_WINDOW
+                      --> delta = 10420225
+                      --> window_size = 10485760
+t=78444 [st=    1]    SPDY_SESSION_SENT_WINDOW_UPDATE_FRAME
+                      --> delta = 10420225
+                      --> stream_id = 0
+t=78444 [st=    1]    SPDY_SESSION_SYN_STREAM
+                      --> fin = true
+                      --> :authority: 192.168.59.103:8443
+                          :method: GET
+                          :path: /favicon.ico
+                          :scheme: https
+                          accept: */*
+                          accept-encoding: gzip, deflate, sdch
+                          accept-language: nl-NL,nl;q=0.8,en-US;q=0.6,en;q=0.4
+                          cache-control: no-cache
+                          pragma: no-cache
+                          referer: https://192.168.59.103:8443/blog-http2-push/push?rows=1&columns=0
+                          user-agent: Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2283.5 Safari/537.36
+                      --> spdy_priority = 2
+                      --> stream_id = 1
+                      --> unidirectional = false
+t=78453 [st=   10]    SPDY_SESSION_RECV_SETTINGS
+                      --> clear_persisted = false
+                      --> host = "192.168.59.103:8443"
+t=78453 [st=   10]    SPDY_SESSION_RECV_SETTING
+                      --> flags = 0
+                      --> id = 1
+                      --> value = 4096
+t=78453 [st=   10]    SPDY_SESSION_RECV_SETTING
+                      --> flags = 0
+                      --> id = 3
+                      --> value = 1024
+t=78453 [st=   10]    SPDY_SESSION_UPDATE_STREAMS_SEND_WINDOW_SIZE
+                      --> delta_window_size = 0
+t=78453 [st=   10]    SPDY_SESSION_RECV_SETTING
+                      --> flags = 0
+                      --> id = 4
+                      --> value = 65535
+t=78457 [st=   14]    SPDY_SESSION_RECV_HEADERS
+                      --> fin = false
+                      --> :status: 200
+                          cache-control: max-age=360000,public
+                          content-length: 1150
+                          content-type: image/x-icon
+                          last-modified: Thu, 29 Jan 2015 19:54:36 GMT
+                          server: Jetty(9.3.0-SNAPSHOT)
+                      --> stream_id = 1
+t=78459 [st=   16]    SPDY_SESSION_RECV_DATA
+                      --> fin = false
+                      --> size = 1150
+                      --> stream_id = 1
+t=78459 [st=   16]    SPDY_SESSION_UPDATE_RECV_WINDOW
+                      --> delta = -1150
+                      --> window_size = 10484610
+t=78459 [st=   16]    SPDY_SESSION_RECV_DATA
+                      --> fin = true
+                      --> size = 0
+                      --> stream_id = 1
+t=78459 [st=   16]    SPDY_STREAM_UPDATE_RECV_WINDOW
+                      --> delta = 1150
+                      --> window_size = 10485760
+t=89187 [st=10744]    SPDY_SESSION_CLOSE
+                      --> description = "Finished going away"
+                      --> net_error = 0 (?)
+t=89187 [st=10744]    SPDY_SESSION_POOL_REMOVE_SESSION
+                      --> source_dependency = 4851 (SPDY_SESSION)
+t=89187 [st=10744] -SPDY_SESSION
